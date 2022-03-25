@@ -4,8 +4,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-
 }
 .icon {
     height: 60px;
@@ -13,5 +11,5 @@
     background-color: #eeeef5;
 }
 .description {
-    border: 1px solid;
+
 }
