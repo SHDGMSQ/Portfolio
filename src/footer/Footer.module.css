@@ -1,0 +1,26 @@
+.footerBlock {
+    height: 100vh;
+    background-color: #dce31d;
+}
+.footerContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.title {
+    background-color: #437716;
+}
+.icons {
+    display: flex;
+    justify-content: space-between;
+}
+.icon {
+    height: 60px;
+    width: 60px;
+    background-color: #f7f7f7;
+    border: 1px solid;
+}
+
+
+.copyright {
+
+}

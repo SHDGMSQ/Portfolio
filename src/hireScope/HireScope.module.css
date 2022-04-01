@@ -1,0 +1,12 @@
+.hireBlock {
+    height: 100vh;
+    background-color: #d5e31d;
+}
+.hireContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.title {
+    background-color: #0a91da;
+}
