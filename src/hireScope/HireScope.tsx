@@ -7,7 +7,7 @@ export const HireScope = () => {
         <div className={style.hireBlock}>
             <div className={`${styleContainer.container} ${style.hireContainer}`}>
                 <h2 className={style.title}> Hire me</h2>
-                <button>Hire me</button>
+                <button className={style.button}>Hire me</button>
             </div>
         </div>
     );

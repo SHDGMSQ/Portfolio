@@ -3,17 +3,35 @@
     background-color: #e7e7e7;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid;
+}
+
+.imgContainer {
+    height: 200px;
+    width: 100%;
+    background-image: url("https://bipbap.ru/wp-content/uploads/2017/04/72fqw2qq3kxh.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.icon {
-    height: 60px;
-    width: 60px;
-    background-color: #eeeef5;
+.button {
+    width: 125px;
+    height: 40px;
+    background-color: rgba(2, 195, 255);
 }
+
 .projectName {
-
+    margin-left: 10%;
+    margin-top: 5%;
+    border: 1px solid;
 }
-.description {
 
+.description {
+    margin-top: 5%;
+    margin-left: 10%;
+    border: 1px solid;
 }

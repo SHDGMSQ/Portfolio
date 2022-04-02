@@ -2,5 +2,13 @@
     border: 1px solid red;
     width: 300px;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+}
+
+.nav > a {
+    text-decoration: none;
+}
+
+.nav > a:hover {
+    text-decoration: underline;
 }

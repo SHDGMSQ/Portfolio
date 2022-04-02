@@ -4,10 +4,10 @@ import style from './Nav.module.css';
 export const Nav = () => {
     return (
         <div className={style.nav}>
-       <a href={''} style={{textDecoration: 'none'}}>Main</a>
-       <a href={''} style={{textDecoration: 'none'}}>Skills</a>
-       <a href={''} style={{textDecoration: 'none'}}>Projects</a>
-       <a href={''} style={{textDecoration: 'none'}}>Contacts</a>
+            <a href={''}>Main</a>
+            <a href={''}>Skills</a>
+            <a href={''}>Projects</a>
+            <a href={''}>Contacts</a>
         </div>
     );
 };

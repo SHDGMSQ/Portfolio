@@ -1,14 +1,17 @@
 .projectsBlock {
-    height: 100vh;
-    background-color: #4590b0;
+    min-height: 100vh;
+    background-color: #45b05e;
 }
+
 .projectsContainer {
     flex-direction: column;
     justify-content: flex-start;
 }
+
 .title {
-    background-color: #c9821b;
+    background-color: #11a478;
 }
+
 .projects {
     border: 1px solid;
     width: 100%;
@@ -16,3 +19,4 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Footer.module.css'
+import style from './Footer.module.css';
 import styleContainer from '../common/styles/Container.module.css';
 
 export const Footer = () => {
@@ -16,5 +16,5 @@ export const Footer = () => {
                 <h6 className={style.copyright}>All rights reserved</h6>
             </div>
         </div>
-    )
-}
+    );
+};

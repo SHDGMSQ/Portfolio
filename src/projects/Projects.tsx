@@ -1,6 +1,6 @@
 import React from 'react';
-import { Project } from './project/Project';
-import style from './Projects.module.css'
+import {Project} from './project/Project';
+import style from './Projects.module.css';
 import styleContainer from '../common/styles/Container.module.css';
 
 export const Projects = () => {
@@ -11,8 +11,10 @@ export const Projects = () => {
                 <div className={style.projects}>
                     <Project/>
                     <Project/>
+                    <Project/>
+                    <Project/>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
