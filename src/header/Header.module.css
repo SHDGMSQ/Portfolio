@@ -1,5 +1,5 @@
 .header {
-    height: 80px;
+    min-height: 5vh;
     background-color: #99d0fb;
     display: flex;
     justify-content: flex-end;
