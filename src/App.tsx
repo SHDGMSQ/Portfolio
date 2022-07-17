@@ -18,6 +18,9 @@ export enum PATH {
     PAGE_NOT_FOUND = '/*',
 }
 
+//styles
+
+
 export const App = () => {
 
     const location = useLocation();
@@ -27,7 +30,7 @@ export const App = () => {
         },
         from: {
             opacity: 0.1,
-            transform: 'translate3d(0px, 0px, 0px)'
+            transform: 'translate3d(1000px, 0px, 0px)'
         },
         /*to: {
             opacity: 1,
@@ -37,10 +40,10 @@ export const App = () => {
             opacity: 1,
             transform: 'translate3d(0px, 0px, 0px)'
         },
-        leave: {
-            opacity: 1,
-            transform: 'translate3d(-2000px, 0px, 0px)'
-        }
+        /*leave: {
+            // opacity: 0.1,
+            transform: 'translate3d(-1000px, 0px, 0px)'
+        }*/
     });
 
     return <>
@@ -56,6 +59,19 @@ export const App = () => {
                         <Route path={PATH.CONTACTS} element={<Contacts/>}/>
                         <Route path={PATH.PAGE_NOT_FOUND} element={<Error404/>}/>
                     </Routes>
+                    <div className={'swaper'}>
+                <span className={'swaperBullet'}>
+                    <div className={'parallaxWrap'}>
+                        <div className={'parallaxElement'}>
+                            <svg className={'svgStyle'}>
+                                <circle className={'circleStyle'}>
+                                </circle>
+
+                            </svg>
+                        </div>
+                    </div>
+                </span>
+                    </div>
                 </animated.div>
             )}
         </div>
