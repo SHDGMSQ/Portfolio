@@ -30,18 +30,14 @@ export const App = () => {
         },
         from: {
             opacity: 0.1,
-            transform: 'translate3d(1000px, 0px, 0px)'
+            transform: 'translate3d(1500px, 0px, 0px)'
         },
-        /*to: {
-            opacity: 1,
-            transform: 'translate3d(0px, 0px, 0px)'
-        },*/
         enter: {
             opacity: 1,
             transform: 'translate3d(0px, 0px, 0px)'
         },
         /*leave: {
-            // opacity: 0.1,
+            opacity: 1,
             transform: 'translate3d(-1000px, 0px, 0px)'
         }*/
     });
