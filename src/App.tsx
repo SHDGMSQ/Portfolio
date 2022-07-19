@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import {Main} from './main/Main';
 import {Projects} from './projects/Projects';
@@ -20,8 +20,8 @@ export enum PATH {
 
 //styles
 
-
 export const App = () => {
+
 
     const location = useLocation();
     const transitions = useTransition(location, {
@@ -30,7 +30,7 @@ export const App = () => {
         },
         from: {
             opacity: 0.1,
-            transform: 'translate3d(1500px, 0px, 0px)'
+            transform: 'translate3d(0px, 0px, 0px)'
         },
         enter: {
             opacity: 1,
@@ -41,6 +41,7 @@ export const App = () => {
             transform: 'translate3d(-1000px, 0px, 0px)'
         }*/
     });
+
 
     return <>
         <Header/>
@@ -73,4 +74,5 @@ export const App = () => {
         </div>
     </>;
 };
+
 
