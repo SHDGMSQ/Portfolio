@@ -2,7 +2,6 @@ import React from 'react';
 import style from './Main.module.css';
 import stylesContainer from './../common/styles/Container.module.css';
 
-//new commit
 export const Main = () => {
     return (
         <>
