@@ -4,6 +4,7 @@ import stylesContainer from './../common/styles/Container.module.css';
 
 // need to add mixits
 //need to add megia
+//need to choose a style of portfolio
 export const Main = () => {
     return (
         <>
