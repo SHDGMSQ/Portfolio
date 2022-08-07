@@ -1,5 +1,5 @@
 .footerBlock {
-    min-height: 26vh;
+    max-height: 25vh;
     background-color: rgba(178, 180, 93, 0.56);
 }
 

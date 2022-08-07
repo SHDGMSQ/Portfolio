@@ -2,10 +2,7 @@ import React from 'react';
 import style from './Main.module.css';
 import stylesContainer from './../common/styles/Container.module.css';
 
-// need to add mixits
-//need to add megia
-//need to choose a style of portfolio
-//need to create a structure of project
+
 export const Main = () => {
     return (
         <>

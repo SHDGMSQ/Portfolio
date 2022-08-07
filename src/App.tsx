@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './App.css';
 import {Main} from './main/Main';
 import {Projects} from './projects/Projects';
@@ -8,6 +8,8 @@ import {Navigate, Route, Routes, useLocation} from 'react-router-dom';
 import {Error404} from './error404/Error404';
 import {animated, useTransition} from 'react-spring';
 import {Header} from './header/Header';
+import {HireScope} from './hireScope/HireScope';
+import {Footer} from './footer/Footer';
 
 export enum PATH {
     HOME = '/',
@@ -57,6 +59,11 @@ export const App = () => {
                         <Route path={PATH.CONTACTS} element={<Contacts/>}/>
                         <Route path={PATH.PAGE_NOT_FOUND} element={<Error404/>}/>
                     </Routes>
+                    <Skills/>
+                    <Projects/>
+                    <Contacts/>
+                    <HireScope/>
+                    <Footer/>
                 </animated.div>
             )}
         </div>
