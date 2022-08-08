@@ -7,9 +7,15 @@ import {Skill} from './skill/Skill';
 export const Skills = () => {
     return (
         <>
-            <div id='skills' className={style.skillsBlock}>
+            <div className={style.skillsBlock}>
                 <div className={`${styleContainer.container} ${style.skillsContainer}`}>
-                    <h2 className={style.title}>Skills</h2>
+                    <div className={style.title}>
+                        <h2>My Skills</h2>
+                        <div className={style.textCenter}>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
                     <div className={style.skills}>
                         <Skill title={'JS'}
                                description="Hi, it is my JS skill11111 11111111111111 111111111111 111111111 111111111111 11111111 11111 111111111111 1111111111111 1111111111111 111111111111111111111111"/>

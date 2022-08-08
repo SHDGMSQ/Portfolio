@@ -1,11 +1,10 @@
 .mainBlock {
     min-height: 100vh;
-    background-color: #ffd4d0;
+    background-color: #020312;
 }
 
 .text {
     width: 500px;
-    background-color: #07252d;
 }
 
 .text h1 {

@@ -6,6 +6,7 @@
 .projectsContainer {
     flex-direction: column;
     justify-content: flex-start;
+    background-color: #54595F;;
 }
 
 .title {
