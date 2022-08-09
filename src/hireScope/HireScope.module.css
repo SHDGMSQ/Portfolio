@@ -1,6 +1,5 @@
 .hireBlock {
     min-height: 25vh;
-    background-color: #020312;
 }
 
 .hireContainer {
@@ -8,10 +7,6 @@
     justify-content: center;
     border: 1px solid;
     min-height: 200px;
-}
-
-.title {
-    background-color: #0adac2;
 }
 
 .button {

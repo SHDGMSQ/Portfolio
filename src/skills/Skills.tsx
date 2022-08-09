@@ -2,6 +2,7 @@ import React from 'react';
 import style from './Skills.module.css';
 import styleContainer from './../common/styles/Container.module.css';
 import {Skill} from './skill/Skill';
+import {Title} from '../common/components/Title';
 
 
 export const Skills = () => {
@@ -9,13 +10,7 @@ export const Skills = () => {
         <>
             <div className={style.skillsBlock}>
                 <div className={`${styleContainer.container} ${style.skillsContainer}`}>
-                    <div className={style.title}>
-                        <h2>My Skills</h2>
-                        <div className={style.textCenter}>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
+                    <Title title={'My Skills'}/>
                     <div className={style.skills}>
                         <Skill title={'JS'}
                                description="Hi, it is my JS skill11111 11111111111111 111111111111 111111111 111111111111 11111111 11111 111111111111 1111111111111 1111111111111 111111111111111111111111"/>
