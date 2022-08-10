@@ -3,6 +3,7 @@ import style from './Skills.module.css';
 import styleContainer from './../common/styles/Container.module.css';
 import {Skill} from './skill/Skill';
 import {Title} from '../common/components/Title';
+import jsIcon from './../common/images/JS.png'
 
 
 export const Skills = () => {
@@ -13,7 +14,9 @@ export const Skills = () => {
                     <Title title={'My Skills'}/>
                     <div className={style.skills}>
                         <Skill title={'JS'}
-                               description="Hi, it is my JS skill11111 11111111111111 111111111111 111111111 111111111111 11111111 11111 111111111111 1111111111111 1111111111111 111111111111111111111111"/>
+                               description="1"
+                        icon={jsIcon}
+                        />
                         <Skill title={'HTML'}
                                description="Hi, it is my HTML skill2222222222222 22222222222222222222 22222222222"/>
                         <Skill title={'React'}
