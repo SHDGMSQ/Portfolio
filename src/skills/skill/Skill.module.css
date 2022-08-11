@@ -20,9 +20,9 @@
 .icon {
     height: 60px;
     width: 60px;
-    background-image: url("/src/common/images/JS.png");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .iconPerсent {
     height: 60px;

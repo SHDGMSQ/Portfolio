@@ -20,3 +20,14 @@
         justify-content: center;
     }
 }
+
+.progressRing {
+    width: 120px;
+    height: 120px;
+}
+
+.circle {
+    stroke: #0adac2;
+    stroke-width: 10;
+    fill: transparent;
+}
