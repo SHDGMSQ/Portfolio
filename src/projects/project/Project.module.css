@@ -1,37 +1,57 @@
 .project {
     width: 250px;
-    background-color: #e7e7e7;
+    background-color: #12141c;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border: 1px solid;
 }
 
 .imgContainer {
     height: 200px;
     width: 100%;
-    background-image: url("https://bipbap.ru/wp-content/uploads/2017/04/72fqw2qq3kxh.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.imgContainer::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.4;
 }
 
 .button {
     width: 125px;
     height: 40px;
     background-color: rgba(2, 195, 255);
+    position: relative;
+    z-index: 1;
+}
+.button:hover {
+    background-color: white;
 }
 
 .projectName {
-    margin-left: 10%;
-    margin-top: 5%;
-    border: 1px solid;
+    margin: 5% auto 0 auto;
+    font-family: 'Rubik', sans-serif;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5em;
 }
 
 .description {
     margin-top: 5%;
     margin-left: 10%;
-    border: 1px solid;
+    font-family: 'Open Sans', sans-serif;
+    color: #dfdfdf;
 }

@@ -15,7 +15,7 @@
     flex-wrap: wrap;
 }
 
-@media screen and (max-width: 558px) {
+@media screen and (max-width: 625px) {
     .skills {
         justify-content: center;
     }

@@ -60,9 +60,9 @@ export const App = () => {
                         <Route path={PATH.PAGE_NOT_FOUND} element={<Error404/>}/>
                     </Routes>
                     <Skills/>
+                    <HireScope/>
                     <Projects/>
                     <Contacts/>
-                    <HireScope/>
                     <Footer/>
                 </animated.div>
             )}

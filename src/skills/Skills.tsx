@@ -3,15 +3,15 @@ import style from './Skills.module.css';
 import styleContainer from './../common/styles/Container.module.css';
 import {Skill} from './skill/Skill';
 import {Title} from '../common/components/Title';
-import reactIcon from '../assets/images/React.png'
-import tsIcon from '../assets/images/TS.png'
-import sassIcon from '../assets/images/sass.png'
-import restApiIcon from '../assets/images/RestAPI.png'
-import tddIcon from '../assets/images/TDD.png'
-import gitIcon from '../assets/images/git.png'
-import muiIcon from '../assets/images/mui.png'
-import storybookIcon from '../assets/images/storybook.png'
-import unitTestIcon from '../assets/images/unitTest.png'
+import reactIcon from '../assets/images/skillImages/React.png'
+import tsIcon from '../assets/images/skillImages/TS.png'
+import sassIcon from '../assets/images/skillImages/sass.png'
+import restApiIcon from '../assets/images/skillImages/RestAPI.png'
+import tddIcon from '../assets/images/skillImages/TDD.png'
+import gitIcon from '../assets/images/skillImages/git.png'
+import muiIcon from '../assets/images/skillImages/mui.png'
+import storybookIcon from '../assets/images/skillImages/storybook.png'
+import unitTestIcon from '../assets/images/skillImages/unitTest.png'
 
 
 export const Skills = () => {
