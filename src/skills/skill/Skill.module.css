@@ -18,18 +18,18 @@
     margin: 20px 0px 20px 0px;
 }
 .icon {
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.iconPerсent {
-    height: 60px;
-    width: 60px;
-    background-color: #eeeef5;
-    margin-bottom: 20px;
-}
+/*.iconPerсent {*/
+/*    height: 60px;*/
+/*    width: 60px;*/
+/*    background-color: #eeeef5;*/
+/*    margin-bottom: 20px;*/
+/*}*/
 
 .description {
     font-family: 'Open Sans', sans-serif;

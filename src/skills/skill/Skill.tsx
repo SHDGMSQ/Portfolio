@@ -9,7 +9,7 @@ export const Skill = (props: SkillPropsType) => {
             <div className={style.title}>
                 <h4>{props.title}</h4>
             </div>
-            <div className={style.iconPerсent}></div>
+            {/*<div className={style.iconPerсent}></div>*/}
             <span className={style.description}>{props.description}</span>
         </div>
     );

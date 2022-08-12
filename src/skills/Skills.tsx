@@ -3,15 +3,29 @@ import style from './Skills.module.css';
 import styleContainer from './../common/styles/Container.module.css';
 import {Skill} from './skill/Skill';
 import {Title} from '../common/components/Title';
-import jsIcon from '../assets/images/JS.png'
-import htmlIcon from '../assets/images/HTML.png'
+import reactIcon from '../assets/images/React.png'
+import tsIcon from '../assets/images/TS.png'
+import sassIcon from '../assets/images/sass.png'
+import restApiIcon from '../assets/images/RestAPI.png'
+import tddIcon from '../assets/images/TDD.png'
+import gitIcon from '../assets/images/git.png'
+import muiIcon from '../assets/images/mui.png'
+import storybookIcon from '../assets/images/storybook.png'
+import unitTestIcon from '../assets/images/unitTest.png'
 
 
 export const Skills = () => {
 
     //icons
-    const js = {backgroundImage: `url(${jsIcon})`}
-    const html = {backgroundImage: `url(${htmlIcon})`}
+    const react = {backgroundImage: `url(${reactIcon})`}
+    const ts = {backgroundImage: `url(${tsIcon})`}
+    const sass = {backgroundImage: `url(${sassIcon})`}
+    const restApi = {backgroundImage: `url(${restApiIcon})`}
+    const tdd = {backgroundImage: `url(${tddIcon})`}
+    const git = {backgroundImage: `url(${gitIcon})`}
+    const mui = {backgroundImage: `url(${muiIcon})`}
+    const storybook = {backgroundImage: `url(${storybookIcon})`}
+    const unitTest = {backgroundImage: `url(${unitTestIcon})`}
 
 
     return (
@@ -22,41 +36,40 @@ export const Skills = () => {
                     <div className={style.skills}>
                         <Skill title={'React/Redux'}
                                description="React"
-                               style={html}
+                               style={react}
                         />
                         <Skill title={'JS/TS'}
                                description="js"
-                               style={html}
+                               style={ts}
                         />
-                        <Skill title={'HTML5/CSS3(Sass)'}
+                        <Skill title={'CSS3(Sass)'}
                                description="2"
-                               style={html}
+                               style={sass}
                         />
                         <Skill title={'Rest API'}
                                description="1"
-                               style={js}
+                               style={restApi}
                         />
                         <Skill title={'TDD'}
                                description="1"
-                               style={js}
+                               style={tdd}
                         />
                         <Skill title={'Git/Github'}
                                description="1"
-                               style={js}
+                               style={git}
                         />
                         <Skill title={'Material-UI'}
                                description="1"
-                               style={js}
+                               style={mui}
                         />
                         <Skill title={'Storybook'}
                                description="1"
-                               style={js}
+                               style={storybook}
                         />
-                        <Skill title={'Unit tests'}
+                        <Skill title={'Unit Tests'}
                                description="1"
-                               style={js}
+                               style={unitTest}
                         />
-                        <TestProgressBar/>
                     </div>
                 </div>
             </div>
@@ -64,12 +77,3 @@ export const Skills = () => {
 
     );
 };
-
-const TestProgressBar = () => {
-
-    return <>
-        <svg className={style.progressRing}>
-            <circle id='circle' className={style.circle} cx='60px' cy='60px' r='52'/>
-        </svg>
-        </>
-}
