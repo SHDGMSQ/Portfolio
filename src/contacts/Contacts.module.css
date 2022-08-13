@@ -1,5 +1,5 @@
 .contactsBlock {
-    min-height: 45vh;
+    min-height: 100vh;
     background-image: url(https://i0.wp.com/demo.softhopper.studio/selfer/wp-content/uploads/sites/20/2018/10/bg-man-wall.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -15,26 +15,114 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: black;
-    opacity: 0.0;
+    background-color: #020312;
+    opacity: 0.92;
 }
 
 .contactsContainer {
     flex-direction: column;
     justify-content: flex-start;
-    width: 100%;
 }
 
 .formContainer {
-    border: 1px solid;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.title {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 45px 0;
+    color: #ffffff;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    width: 100%;
 }
 
-.input {
-    width: 250px;
-    margin-bottom: 2px;
+.nameEmail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.name {
+    display: flex;
+    flex: 0 0 50%;
+    flex-direction: column;
+    padding: 15px;
+    margin-left: -15px;
+}
+.name span {
+    color: white;
+    margin-bottom: 5px;
+}
+.name input {
+    height: 40px;
+    color: #828282;
+    background: rgba(255,255,255,0.1);
+    border: 0;
+    outline: none;
+}
+
+.email {
+    display: flex;
+    flex: 0 0 50%;
+    flex-direction: column;
+    padding: 15px;
+    margin-right: -15px;
+}
+.email span {
+    color: white;
+    margin-bottom: 5px;
+}
+.email input {
+    height: 40px;
+    color: #828282;
+    background: rgba(255,255,255,0.1);
+    border: 0;
+    outline: none;
+}
+
+.subject {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0 15px 0;
+}
+.subject span {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.subject input {
+    height: 40px;
+    color: #828282;
+    background: rgba(255,255,255,0.1);
+    border: 0;
+    outline: none;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0 15px 0;
+}
+.message span {
+    color: white;
+    margin-bottom: 5px;
+}
+.message textarea {
+    height: 100px;
+    color: #828282;
+    background: rgba(255,255,255,0.1);
+    border: 0;
+    outline: none;
 }
 
 .button {
@@ -42,4 +130,6 @@
     width: 125px;
     height: 40px;
     background-color: rgba(2, 195, 255);
+    position: relative;
+    z-index: 1;
 }
