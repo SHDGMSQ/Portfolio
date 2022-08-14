@@ -1,5 +1,5 @@
 .contactsBlock {
-    min-height: 200vh;
+    min-height: 150vh;
     background-image: url(https://i0.wp.com/demo.softhopper.studio/selfer/wp-content/uploads/sites/20/2018/10/bg-man-wall.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -24,6 +24,37 @@
     justify-content: flex-start;
 }
 
+.adressContainer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    margin: 0 0 45px 0;
+    padding: 0px 40px 0px 0px;
+    justify-content: flex-start;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    flex: 1rem 1rem 0
+}
+.innerLogo {
+    margin-bottom: 20px;
+}
+.innerTitle {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.innerDescription {
+    font-family: 'Open Sans', sans-serif;
+    color: #dfdfdf;
+    font-size: 0.875rem;
+}
+
 .contactIcons {
     position: relative;
     z-index: 1;
@@ -36,6 +67,36 @@
 .contactIcon {
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width: 670px) {
+    .adressContainer{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 3em;
+    }
+    .inner {
+        margin-bottom: 50px;
+    }
+    .innerLogo {
+        margin-bottom: 10px;
+    }
+    .innerDescription {
+        width: 150px;
+    }
+    .contactIcons {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 6em;
+    }
+    .contactIcon {
+        margin-bottom: 10px;
+    }
+    .title {
+        justify-content: center;
+    }
 }
 
 .label {
