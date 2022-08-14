@@ -29,10 +29,10 @@
     position: relative;
     z-index: 1;
     font-family: 'Rubik', sans-serif;
-    color: white;
+    color: #dfdfdf;
     font-size: 1.65rem;
     font-weight: 400;
-    margin: 0;
+
 }
 
 .button {
