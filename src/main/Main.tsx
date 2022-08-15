@@ -8,11 +8,11 @@ export const Main = () => {
         <>
             <div className={style.mainBlock}>
                 <div className={stylesContainer.container}>
+
                         <div className={style.text}>
                             <h1>I am Dmitry Shavlukevich</h1>
                             <p className={style.description}>Frontend Developer</p>
                         </div>
-                        <div className={style.photo}></div>
                     </div>
                 </div>
         </>

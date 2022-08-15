@@ -1,5 +1,6 @@
 .mainBlock {
     min-height: 100vh;
+    background-image: url(https://i0.wp.com/demo.softhopper.studio/selfer/wp-content/uploads/sites/20/2018/10/bg-man-wall.jpg);
 }
 
 .text {
@@ -31,13 +32,4 @@
                 0 0 80px #03bcf4,
                 0 0 160px #03bcf4,
                 0 0 180px #03bcf4;
-}
-
-.photo {
-    width: 300px;
-    height: 500px;
-    background-image: url(/src/assets/photo/myPhoto.jpg);
-    background-position: center;
-    background-size: cover;
-    margin-top: 5vh;
 }
