@@ -1,7 +1,6 @@
 import React from 'react';
 import style from './HireScope.module.css';
 import styleContainer from '../common/styles/Container.module.css';
-import {Title} from '../common/components/Title';
 
 export const HireScope = () => {
     return (

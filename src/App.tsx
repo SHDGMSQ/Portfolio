@@ -10,6 +10,8 @@ import {animated, useTransition} from 'react-spring';
 import {Header} from './header/Header';
 import {HireScope} from './hireScope/HireScope';
 import {Footer} from './footer/Footer';
+import {AboutMe} from './aboutMe/AboutMe';
+import {Experience} from './experience/Experience';
 
 export enum PATH {
     HOME = '/',
@@ -60,7 +62,9 @@ export const App = () => {
                         <Route path={PATH.PAGE_NOT_FOUND} element={<Error404/>}/>
                     </Routes>
                     <Skills/>
+                    <AboutMe/>
                     <HireScope/>
+                    <Experience/>
                     <Projects/>
                     <Contacts/>
                     <Footer/>
