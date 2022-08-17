@@ -5,6 +5,7 @@ import {IconContext} from 'react-icons';
 import {TbBrandTelegram} from 'react-icons/tb';
 import {FaInstagram, FaSkype} from 'react-icons/fa';
 import {IoLogoLinkedin} from 'react-icons/io';
+import {BsGithub} from 'react-icons/bs';
 
 
 export const Main = () => {
@@ -25,6 +26,9 @@ export const Main = () => {
                             />
                             <MainContactLabel
                                 logoComponent={<FaSkype/>}
+                            />
+                            <MainContactLabel
+                                logoComponent={<BsGithub/>}
                             />
                         </div>
                         <div className={style.text}>
