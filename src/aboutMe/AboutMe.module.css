@@ -1,5 +1,5 @@
 .aboutMe {
-    min-height: 100vh;
+    min-height: 150vh;
     position: relative;
 }
 
@@ -18,7 +18,7 @@
 
 .photo {
     width: 50%;
-    height: 500px;
+    min-height: 90vh;
     background-color: white;
     background-position: center;
     background-size: cover;
@@ -26,32 +26,62 @@
 
 .innerDescription {
     width: 50%;
-    height: 500px;
-    background-color: #0adac2;
+    min-height: 90vh;
+    background: #020312;
 }
 
 .title {
-
+    color: #ffffff;
+    font-size: 1.35rem !important;
+    margin-bottom: 40px;
+    padding: 1.5rem 2.25rem;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
 }
 
 .description {
-
+    line-height: 1.6875rem;
+    margin-bottom: 1.875rem;
+    color: #dfdfdf;
+    box-sizing: border-box;
+    font-size: 1rem;
 }
 
 .contactsContainer {
-
+    background: rgba(29,33,36,0.3);
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 1rem;
 }
 
 .contacts {
-    background-color: rgba(29,33,36,0.3);
-    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
     height: 200px;
+    margin-left: -6rem;
+}
+
+.contactTitle {
+    color: #F26C4F;
+    font-weight: bold;
+}
+.contactDescription {
+    color: #dfdfdf;
+    margin: 0 0 1.5em;
 }
 
 .buttons {
-    background-color: rgba(29,100,36,0.3);
-    width: 300px;
-    height: 150px;
+    display: inline-block;
+}
+.button {
+    width: 125px;
+    height: 40px;
+    background-color: #f26c4f;
+    position: relative;
+    z-index: 1;
+}
+.button:hover {
+    background-color: white;
 }
 
 .adressContainer {
@@ -272,13 +302,4 @@
     background: rgba(255, 255, 255, 0.1);
     border: 0;
     outline: none;
-}
-
-.button {
-    margin-top: 10px;
-    width: 125px;
-    height: 40px;
-    background-color: rgba(2, 195, 255);
-    position: relative;
-    z-index: 1;
 }
