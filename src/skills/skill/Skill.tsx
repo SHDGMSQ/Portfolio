@@ -1,17 +1,18 @@
-import React from 'react';
+import React, {ReactElement} from 'react';
 import style from './Skill.module.css';
 
 
-export const Skill = (props: SkillPropsType) => {
+export const Skill: React.FC<SkillPropsType> = ({title, styles, description}) => {
     return (
         <div className={style.skill}>
-            <div className={style.icon} style={props.style}>
+            <div className={style.icon}>
+                {styles}
             </div>
             <div className={style.title}>
-                <h4>{props.title}</h4>
+                <h4>{title}</h4>
             </div>
             {/*<div className={style.iconPerсent}></div>*/}
-            <span className={style.description}>{props.description}</span>
+            <span className={style.description}>{description}</span>
         </div>
     );
 };
@@ -20,5 +21,5 @@ export const Skill = (props: SkillPropsType) => {
 type SkillPropsType = {
     title: string
     description: string
-    style: {backgroundImage: string}
+    styles: ReactElement
 }
