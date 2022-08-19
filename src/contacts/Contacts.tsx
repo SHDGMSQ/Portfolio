@@ -13,7 +13,7 @@ import {IconContext} from 'react-icons';
 
 export const Contacts = () => {
 
-
+//need to refactor
     return (
         <>
             <div className={style.contactsBlock}>
