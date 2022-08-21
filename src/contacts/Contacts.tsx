@@ -10,7 +10,10 @@ import {TiLocationOutline} from 'react-icons/ti';
 import {FiPhoneCall} from 'react-icons/fi';
 import {GoMail} from 'react-icons/go';
 import {IconContext} from 'react-icons';
-import {ContactHeaderIcons} from '../common/components/Icons/ContactsIcons/ContactsHeaderIcons/ContactsHeaderIcons';
+import {
+    ContactsHeaderIcons
+} from '../common/components/Icons/ContactsIcons/ContactsHeaderIcons/ContactsHeaderIcons';
+import {ContactsBodyIcons} from '../common/components/Icons/ContactsIcons/ContactsBodyIcons/ContactsBodyIcons';
 
 export const Contacts = () => {
 
@@ -21,17 +24,17 @@ export const Contacts = () => {
                 <div className={`${styleContainer.container} ${style.contactsContainer}`}>
                     <Title title={'Contacts'}/>
                     <div className={style.adressContainer}>
-                        <ContactHeaderIcons
+                        <ContactsHeaderIcons
                             logo={<TiLocationOutline/>}
                             title={'Address'}
                             description={'Belarus, Minsk'}
                         />
-                        <ContactHeaderIcons
+                        <ContactsHeaderIcons
                             logo={<FiPhoneCall/>}
                             title={'Phone'}
                             description={'+375 (29) 582-91-59'}
                         />
-                        <ContactHeaderIcons
+                        <ContactsHeaderIcons
                             logo={<GoMail/>}
                             title={'Email'}
                             description={'sh.dg.msq@mail.ru'}
@@ -41,16 +44,16 @@ export const Contacts = () => {
                         <h2>Let's Connect</h2>
                     </div>
                     <div className={style.contactIcons}>
-                        <ContactLabel
+                        <ContactsBodyIcons
                             title="Telegram" logoComponent={<TbBrandTelegram/>}
                         />
-                        <ContactLabel
+                        <ContactsBodyIcons
                             title="Instagram" logoComponent={<FaInstagram/>}
                         />
-                        <ContactLabel
+                        <ContactsBodyIcons
                             title="LinkedIn" logoComponent={<IoLogoLinkedin/>}
                         />
-                        <ContactLabel
+                        <ContactsBodyIcons
                             title="Skype" logoComponent={<FaSkype/>}
                         />
                     </div>
@@ -82,24 +85,3 @@ export const Contacts = () => {
         </>
     );
 };
-
-const ContactLabel: React.FC<ContactLabelPropsType> = (
-    {title, logoComponent}
-) => {
-    return <>
-        <IconContext.Provider value={{color: 'white', size: '1.5rem'}}>
-            <div className={style.contactIcon}>
-                <div className={style.label}>
-                    {logoComponent}
-                </div>
-                <span className={style.text}>{title}</span>
-            </div>
-        </IconContext.Provider>
-    </>;
-};
-
-//types
-type ContactLabelPropsType = {
-    title: string
-    logoComponent: ReactElement
-}

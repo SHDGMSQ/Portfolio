@@ -1,0 +1,32 @@
+.contactIcon {
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    background: #f26c4f;
+    border-radius: 50%;
+    height: 3rem;
+    flex: 0 0 3rem;
+    overflow: hidden;
+    text-align: center;
+    line-height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.015em;
+}
+
+@media screen and (max-width: 670px) {
+    .contactIcon {
+        margin-bottom: 10px;
+    }
+}
