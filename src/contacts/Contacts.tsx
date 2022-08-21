@@ -1,7 +1,7 @@
 import React, {ReactElement} from 'react';
 import style from './Contacts.module.css';
 import styleContainer from '../common/styles/Container.module.css';
-import {Title} from '../common/components/Title';
+import {Title} from '../common/components/Title/Title';
 import {TbBrandTelegram} from 'react-icons/tb';
 import {FaInstagram} from 'react-icons/fa';
 import {IoLogoLinkedin} from 'react-icons/io';
@@ -10,6 +10,7 @@ import {TiLocationOutline} from 'react-icons/ti';
 import {FiPhoneCall} from 'react-icons/fi';
 import {GoMail} from 'react-icons/go';
 import {IconContext} from 'react-icons';
+import {ContactHeaderIcons} from '../common/components/Icons/ContactsIcons/ContactsHeaderIcons/ContactsHeaderIcons';
 
 export const Contacts = () => {
 
@@ -20,9 +21,21 @@ export const Contacts = () => {
                 <div className={`${styleContainer.container} ${style.contactsContainer}`}>
                     <Title title={'Contacts'}/>
                     <div className={style.adressContainer}>
-                        <ContactHeader logo={<TiLocationOutline/>} title={'Address'} description={'Belarus, Minsk'}/>
-                        <ContactHeader logo={<FiPhoneCall/>} title={'Phone'} description={'+375 (29) 582-91-59'}/>
-                        <ContactHeader logo={<GoMail/>} title={'Email'} description={'sh.dg.msq@mail.ru'}/>
+                        <ContactHeaderIcons
+                            logo={<TiLocationOutline/>}
+                            title={'Address'}
+                            description={'Belarus, Minsk'}
+                        />
+                        <ContactHeaderIcons
+                            logo={<FiPhoneCall/>}
+                            title={'Phone'}
+                            description={'+375 (29) 582-91-59'}
+                        />
+                        <ContactHeaderIcons
+                            logo={<GoMail/>}
+                            title={'Email'}
+                            description={'sh.dg.msq@mail.ru'}
+                        />
                     </div>
                     <div className={style.title}>
                         <h2>Let's Connect</h2>
@@ -85,25 +98,8 @@ const ContactLabel: React.FC<ContactLabelPropsType> = (
     </>;
 };
 
-const ContactHeader: React.FC<ContactHeaderPropsType> = ({logo, title, description}) => {
-    return <>
-        <IconContext.Provider value={{color: '#f26c4f', size: '3rem'}}>
-        <div className={style.inner}>
-            <div className={style.innerLogo}>{logo}</div>
-            <div className={style.innerTitle}>{title}</div>
-            <div className={style.innerDescription}>{description}</div>
-        </div>
-        </IconContext.Provider>
-    </>
-}
-
 //types
 type ContactLabelPropsType = {
     title: string
     logoComponent: ReactElement
-}
-type ContactHeaderPropsType = {
-    logo: ReactElement
-    title: string
-    description: string
 }

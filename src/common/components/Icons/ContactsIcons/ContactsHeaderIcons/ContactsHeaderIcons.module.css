@@ -1,0 +1,35 @@
+.inner {
+    display: flex;
+    flex-direction: column;
+    flex: 1rem 1rem 0
+}
+
+.innerLogo {
+    margin-bottom: 20px;
+}
+
+.innerTitle {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.innerDescription {
+    font-family: 'Open Sans', sans-serif;
+    color: #dfdfdf;
+    font-size: 0.875rem;
+}
+
+@media screen and (max-width: 670px) {
+    .inner {
+        margin-bottom: 50px;
+    }
+    .innerLogo {
+        margin-bottom: 10px;
+    }
+    .innerDescription {
+        width: 150px;
+    }
+}

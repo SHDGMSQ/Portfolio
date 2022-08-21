@@ -1,11 +1,11 @@
-import React, {ReactElement} from 'react';
+import React from 'react';
 import style from './Main.module.css';
 import stylesContainer from './../common/styles/Container.module.css';
-import {IconContext} from 'react-icons';
 import {TbBrandTelegram} from 'react-icons/tb';
 import {FaInstagram, FaSkype} from 'react-icons/fa';
 import {IoLogoLinkedin} from 'react-icons/io';
 import {BsGithub} from 'react-icons/bs';
+import {MainIcons} from '../common/components/Icons/MainIcons/MainIcons';
 
 
 export const Main = () => {
@@ -15,19 +15,19 @@ export const Main = () => {
                 <div className={stylesContainer.container}>
                     <div className={style.mainContainer}>
                         <div className={style.contacts}>
-                            <MainContactLabel
+                            <MainIcons
                                 logoComponent={<TbBrandTelegram/>}
                             />
-                            <MainContactLabel
+                            <MainIcons
                                 logoComponent={<FaInstagram/>}
                             />
-                            <MainContactLabel
+                            <MainIcons
                                 logoComponent={<IoLogoLinkedin/>}
                             />
-                            <MainContactLabel
+                            <MainIcons
                                 logoComponent={<FaSkype/>}
                             />
-                            <MainContactLabel
+                            <MainIcons
                                 logoComponent={<BsGithub/>}
                             />
                         </div>
@@ -42,20 +42,3 @@ export const Main = () => {
     );
 };
 
-const MainContactLabel: React.FC<MainContactLabelPropsType> = (
-    {logoComponent}
-) => {
-    return <>
-        <IconContext.Provider value={{size: '1.2rem'}}>
-            <div className={style.contactIcon}>
-                <div className={style.label}>
-                    {logoComponent}
-                </div>
-            </div>
-        </IconContext.Provider>
-    </>;
-};
-
-type MainContactLabelPropsType = {
-    logoComponent: ReactElement
-}

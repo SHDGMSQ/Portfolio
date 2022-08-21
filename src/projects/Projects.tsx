@@ -2,7 +2,7 @@ import React from 'react';
 import {Project} from './project/Project';
 import style from './Projects.module.css';
 import styleContainer from '../common/styles/Container.module.css';
-import {Title} from '../common/components/Title';
+import {Title} from '../common/components/Title/Title';
 import socialIcon from '../assets/images/projectImage/socialNetwork.jpg'
 import todoIcon from '../assets/images/projectImage/todolist.jpg'
 
