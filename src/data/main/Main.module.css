@@ -1,7 +1,7 @@
 .mainBlock {
     min-height: 100vh;
     background-image: url(https://i0.wp.com/demo.softhopper.studio/selfer/wp-content/uploads/sites/20/2018/10/bg-man-wall.jpg);
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -63,6 +63,9 @@
     .text {
         font-size: 35px;
     }
+    .description {
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 660px) {
@@ -72,22 +75,54 @@
     .text {
         font-size: 30px;
     }
+    .description {
+        font-size: 25px;
+    }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 625px) {
     .mainBlock {
-        min-width: 550px;
+        min-width: 625px;
+        background-position: 75% 50%;
     }
     .mainContainer{
         width: 100%;
     }
     .text {
         font-size: 25px;
+        margin-top: 20vh;
+    }
+    .description {
+        font-size: 20px;
     }
 }
 
-@media screen and (max-width: 385px) {
+@media screen and (max-width: 500px) {
+    .mainBlock {
+        min-width: 500px;
+    }
+    .mainContainer{
+        width: 100%;
+    }
     .text {
         font-size: 20px;
+    }
+    .description {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mainBlock {
+        min-width: 400px;
+    }
+    .mainContainer{
+        width: 100%;
+    }
+    .text {
+        font-size: 20px;
+    }
+    .description {
+        font-size: 15px;
     }
 }

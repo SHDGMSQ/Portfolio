@@ -1,6 +1,9 @@
 .footerBlock {
-    max-height: 25vh;
+    min-height: 20vh;
     background-color: #020312;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footerContainer {

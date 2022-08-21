@@ -5,8 +5,8 @@ import {Title} from '../../common/components/Title/Title';
 import {Button} from '../../common/components/Button/Button';
 import {BsArrowRightShort} from 'react-icons/bs';
 import {CgSoftwareDownload} from 'react-icons/cg';
-import {ButtonsIcons} from '../../common/components/Icons/ButtonsIcon/ButtonsIcons';
 import {AboutMeContact} from './aboutMeContact/AboutMeContact';
+import photo from '../../assets/photo/my_photo.jpg'
 
 export const AboutMe = () => {
 
@@ -17,7 +17,9 @@ export const AboutMe = () => {
                 <div className={`${styleContainer.container} ${style.aboutMeContainer}`}>
                     <Title title={'About me'}/>
                     <div className={style.innerContainer}>
-                        <div className={style.photo}></div>
+                        <div className={style.photo}>
+                            <img src={photo}/>
+                        </div>
                         <div className={style.innerDescription}>
                             <div className={style.title}><h4>Hi There</h4></div>
                             <div className={style.description}>In id nulla magna. Nullam posuere fermentum mattis. Nunc

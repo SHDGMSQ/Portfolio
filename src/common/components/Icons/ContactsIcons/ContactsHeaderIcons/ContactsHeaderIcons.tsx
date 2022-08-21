@@ -7,8 +7,8 @@ export const ContactsHeaderIcons: React.FC<ContactsHeaderIconsPropsType> = ({log
         <IconContext.Provider value={{color: '#f26c4f', size: '3rem'}}>
             <div className={style.inner}>
                 <div className={style.innerLogo}>{logo}</div>
-                <div className={style.innerTitle}>{title}</div>
-                <div className={style.innerDescription}>{description}</div>
+                    <div className={style.innerTitle}>{title}</div>
+                    <div className={style.innerDescription}>{description}</div>
             </div>
         </IconContext.Provider>
     </>;
