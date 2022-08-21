@@ -1,15 +1,10 @@
-.textCenter {
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    margin-bottom: 30px;
-}
 .title {
     text-align: center;
     margin: 30px 0px 30px 0px;
     position: relative;
     z-index: 1;
 }
+
 .title h2 {
     font-family: 'Rubik', sans-serif;
     color: #ffffff;
@@ -19,6 +14,12 @@
     line-height: 1.5em;
     letter-spacing: 0.015px;
     margin: 0
+}
+
+.textCenter {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
 }
 
 .textCenter::before {

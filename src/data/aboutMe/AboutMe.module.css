@@ -1,0 +1,71 @@
+.aboutMe {
+    min-height: 150vh;
+    position: relative;
+}
+
+.aboutMeContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.innerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: initial;
+}
+
+.photo {
+    min-width: 50%;
+    background-color: #12141c;
+    background-position: center;
+    background-size: cover;
+}
+
+.innerDescription {
+    width: 50%;
+    background: #020312;
+}
+
+.title {
+    color: #ffffff;
+    font-size: 1.35rem !important;
+    margin-bottom: 40px;
+    padding: 1.5rem 2.25rem;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+}
+
+.description {
+    line-height: 1.6875rem;
+    margin-bottom: 1.875rem;
+    color: #dfdfdf;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.contactsContainer {
+    background: rgba(29,33,36,0.3);
+    padding: 30px;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.contacts {
+    display: flex;
+    justify-content: flex-start;
+    height: 7rem;
+}
+
+.phone {
+    margin-left: 4rem;
+}
+
+.buttons {
+    display: flex;
+}
+
+.firstButton {
+    margin-right: 1rem;
+}
+

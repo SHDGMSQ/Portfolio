@@ -20,6 +20,7 @@ type ButtonPropsType = {
     logo?: ReactElement<{ logoComponent: ReactElement }>
     styles?: StylesPropsType
 }
+
 type StylesPropsType = {
     backgroundColor?: string,
     border?: string,

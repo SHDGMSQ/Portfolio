@@ -6,7 +6,7 @@ export const ButtonsIcons: React.FC<ButtonsIconsPropsType> = (
 ) => {
     return <>
         <IconContext.Provider value={{size: '1.5rem'}}>
-                    {logoComponent}
+            {logoComponent}
         </IconContext.Provider>
     </>;
 };

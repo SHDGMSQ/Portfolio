@@ -1,6 +1,6 @@
 import React, {ReactElement} from 'react';
 import {IconContext} from 'react-icons';
-import style from './ContactsHeaderIcons.module.css'
+import style from './ContactsHeaderIcons.module.css';
 
 export const ContactsHeaderIcons: React.FC<ContactsHeaderIconsPropsType> = ({logo, title, description}) => {
     return <>
@@ -11,8 +11,8 @@ export const ContactsHeaderIcons: React.FC<ContactsHeaderIconsPropsType> = ({log
                 <div className={style.innerDescription}>{description}</div>
             </div>
         </IconContext.Provider>
-    </>
-}
+    </>;
+};
 
 //type
 

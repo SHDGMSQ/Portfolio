@@ -1,0 +1,93 @@
+.mainBlock {
+    min-height: 100vh;
+    background-image: url(https://i0.wp.com/demo.softhopper.studio/selfer/wp-content/uploads/sites/20/2018/10/bg-man-wall.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.mainBlock::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #020312;
+    opacity: 0.92;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 70%;
+}
+
+.contacts {
+    margin-top: 20vh;
+    display: flex;
+}
+
+.text {
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 45px;
+    margin-top: 5vh;
+}
+
+.text h2 span {
+    display: block;
+}
+
+.description {
+    font-family: 'Rubik', sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 940px) {
+    .mainBlock {
+        min-width: 940px;
+    }
+    .text {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .mainBlock {
+        min-width: 800px;
+    }
+    .text {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .mainBlock {
+        min-width: 660px;
+    }
+    .text {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .mainBlock {
+        min-width: 550px;
+    }
+    .mainContainer{
+        width: 100%;
+    }
+    .text {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .text {
+        font-size: 20px;
+    }
+}
