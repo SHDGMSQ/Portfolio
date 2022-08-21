@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './Project.module.css';
+import {Button} from '../../common/components/Button/Button';
 
 export const Project = (props: ProjectPropsType) => {
 
@@ -8,7 +9,7 @@ export const Project = (props: ProjectPropsType) => {
     return (
         <div className={style.project}>
             <div className={style.imgContainer} style={props.style}>
-                <button className={style.button} onClick={onClickHandler}>Click</button>
+                <Button title={'Show More'}/>
             </div>
             <span className={style.projectName}>{props.projectName}</span>
             <span className={style.description}>{props.description}</span>

@@ -3,7 +3,6 @@
     position: relative;
 }
 
-
 .aboutMeContainer {
     flex-direction: column;
     justify-content: flex-start;
@@ -13,20 +12,18 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-
+    align-items: initial;
 }
 
 .photo {
-    width: 50%;
-    min-height: 90vh;
-    background-color: white;
+    min-width: 50%;
+    background-color: #12141c;
     background-position: center;
     background-size: cover;
 }
 
 .innerDescription {
     width: 50%;
-    min-height: 90vh;
     background: #020312;
 }
 
@@ -56,9 +53,11 @@
 
 .contacts {
     display: flex;
-    justify-content: space-evenly;
-    height: 200px;
-    margin-left: -6rem;
+    justify-content: flex-start;
+    height: 7rem;
+}
+.phone {
+    margin-left: 4rem;
 }
 
 .contactTitle {
@@ -71,17 +70,10 @@
 }
 
 .buttons {
-    display: inline-block;
+    display: flex;
 }
-.button {
-    width: 125px;
-    height: 40px;
-    background-color: #f26c4f;
-    position: relative;
-    z-index: 1;
-}
-.button:hover {
-    background-color: white;
+.firstButton {
+    margin-right: 1rem;
 }
 
 .adressContainer {

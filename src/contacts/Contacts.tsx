@@ -1,19 +1,16 @@
-import React, {ReactElement} from 'react';
+import React from 'react';
 import style from './Contacts.module.css';
 import styleContainer from '../common/styles/Container.module.css';
 import {Title} from '../common/components/Title/Title';
 import {TbBrandTelegram} from 'react-icons/tb';
-import {FaInstagram} from 'react-icons/fa';
+import {FaInstagram, FaSkype} from 'react-icons/fa';
 import {IoLogoLinkedin} from 'react-icons/io';
-import {FaSkype} from 'react-icons/fa';
 import {TiLocationOutline} from 'react-icons/ti';
 import {FiPhoneCall} from 'react-icons/fi';
 import {GoMail} from 'react-icons/go';
-import {IconContext} from 'react-icons';
-import {
-    ContactsHeaderIcons
-} from '../common/components/Icons/ContactsIcons/ContactsHeaderIcons/ContactsHeaderIcons';
+import {ContactsHeaderIcons} from '../common/components/Icons/ContactsIcons/ContactsHeaderIcons/ContactsHeaderIcons';
 import {ContactsBodyIcons} from '../common/components/Icons/ContactsIcons/ContactsBodyIcons/ContactsBodyIcons';
+import {Button} from '../common/components/Button/Button';
 
 export const Contacts = () => {
 
@@ -80,6 +77,18 @@ export const Contacts = () => {
                             <textarea/>
                         </div>
                     </form>
+                    <div className={style.buttonContainer}>
+                        <Button
+                            title={'Send a message'}
+                            styles={
+                                {
+                                    borderRadius: '2rem',
+                                    width: '15rem',
+                                    height: '4rem'
+                                }
+                            }
+                        />
+                    </div>
                 </div>
             </div>
         </>

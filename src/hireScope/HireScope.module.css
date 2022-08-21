@@ -34,11 +34,3 @@
     font-weight: 400;
 
 }
-
-.button {
-    width: 125px;
-    height: 40px;
-    background-color: rgba(2, 195, 255);
-    position: relative;
-    z-index: 1;
-}

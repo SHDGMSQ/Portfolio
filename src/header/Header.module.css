@@ -1,6 +1,6 @@
 .header {
     min-height: 5vh;
-    background-color: #99d0fb;
+    background-color: #020312;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -9,4 +9,5 @@
     right: 0;
     left: 0;
     z-index: 1030;
+    padding-right: 3rem;
 }
