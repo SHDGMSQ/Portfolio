@@ -1,10 +1,10 @@
 .inner {
     display: flex;
     flex-direction: column;
-    flex: 1rem 1rem 0
+    flex: 1rem 1rem 0;
+    width: 200px;
+    height: 150px;
 }
-
-
 
 .innerLogo {
     margin-bottom: 20px;
@@ -26,12 +26,13 @@
 
 @media screen and (max-width: 670px) {
     .inner {
+        justify-content: center;
+        align-items: center;
         margin-bottom: 50px;
     }
     .innerLogo {
         margin-bottom: 10px;
     }
     .innerDescription {
-        width: 150px;
     }
 }

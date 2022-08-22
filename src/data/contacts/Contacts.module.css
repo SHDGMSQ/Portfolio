@@ -30,8 +30,7 @@
     display: flex;
     width: 100%;
     margin: 0 0 45px 0;
-    padding: 0px 40px 0px 0px;
-    justify-content: flex-start;
+    padding: 0 6rem 0 0
 }
 
 .title {
@@ -162,10 +161,12 @@
         padding-bottom: 30px;
     }
     .adressContainer {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 3em;
+        align-items: center;
+        margin: 0;
+    }
+    .adressContainer {
+        flex-direction: column;
+        padding: 0;
     }
     .contactIcons {
         display: block;
