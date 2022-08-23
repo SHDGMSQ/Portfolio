@@ -6,10 +6,13 @@ import {Button} from '../../common/components/Button/Button';
 import {BsArrowRightShort} from 'react-icons/bs';
 import {CgSoftwareDownload} from 'react-icons/cg';
 import {AboutMeContact} from './aboutMeContact/AboutMeContact';
-import photo from '../../assets/photo/my_photo.jpg'
+import photo from '../../assets/photo/my_photo.jpg';
 
 export const AboutMe = () => {
 
+    const myPhoto = {
+        backgroundImage: `url(${photo})`
+    };
 
     return (
         <>
@@ -17,8 +20,7 @@ export const AboutMe = () => {
                 <div className={`${styleContainer.container} ${style.aboutMeContainer}`}>
                     <Title title={'About me'}/>
                     <div className={style.innerContainer}>
-                        <div className={style.photo}>
-                            <img src={photo}/>
+                            <div className={style.photo} style={myPhoto}>
                         </div>
                         <div className={style.innerDescription}>
                             <div className={style.title}><h4>Hi There</h4></div>
@@ -28,7 +30,7 @@ export const AboutMe = () => {
                             </div>
                             <div className={style.contactsContainer}>
                                 <div className={style.contacts}>
-                                    <div>
+                                    <div className={style.nameEmail}>
                                         <AboutMeContact title={'Name:'} description={'Dmitry Shavlukevich'}/>
                                         <AboutMeContact title={'Email:'} description={'sh.dg.msq@mail.ru'}/>
                                     </div>

@@ -7,3 +7,7 @@
     color: #dfdfdf;
     margin: 0 0 1.5em;
 }
+
+@media screen and (max-width: 495px) {
+
+}
