@@ -14,7 +14,6 @@ export const AboutMe = () => {
         backgroundImage: `url(${photo})`
     };
 
-   //need to fix border
     return (
         <>
             <div className={style.aboutMe}>
