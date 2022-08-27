@@ -13,7 +13,7 @@ export const AboutMe = () => {
     const myPhoto = {
         backgroundImage: `url(${photo})`
     };
-//need to change
+
     return (
         <>
             <div className={style.aboutMe}>
