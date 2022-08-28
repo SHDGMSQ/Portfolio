@@ -1,6 +1,6 @@
 import React, {ReactElement} from 'react';
 import {IconContext} from 'react-icons';
-import style from './ContactsHeaderIcons.module.css';
+import style from './ContactsHeaderIcons.module.scss';
 
 export const ContactsHeaderIcons: React.FC<ContactsHeaderIconsPropsType> = ({logo, title, description}) => {
     return <>

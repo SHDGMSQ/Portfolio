@@ -1,9 +1,11 @@
 .contactIcon {
-    display: flex;
-    align-items: center;
-}
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 670px) {
+    margin-bottom: 10px;
+  }
 
-.label {
+  .label {
     background: #f26c4f;
     border-radius: 50%;
     height: 3rem;
@@ -17,16 +19,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.text {
+  .text {
     color: white;
     font-weight: 600;
     letter-spacing: 0.015em;
+  }
 }
 
-@media screen and (max-width: 670px) {
-    .contactIcon {
-        margin-bottom: 10px;
-    }
-}
+
+
+
+

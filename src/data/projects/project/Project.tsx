@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Project.module.css';
+import style from './Project.module.scss';
 import {Button} from '../../../common/components/Button/Button';
 
 export const Project: React.FC<ProjectPropsType> = ({styles, projectName, description}) => {

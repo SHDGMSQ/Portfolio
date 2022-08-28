@@ -1,6 +1,6 @@
 import React, {ReactElement} from 'react';
 import {IconContext} from 'react-icons';
-import style from './ContactsBodyIcons.module.css';
+import style from './ContactsBodyIcons.module.scss';
 
 export const ContactsBodyIcons: React.FC<ContactsBodyIconsPropsType> = (
     {title, logoComponent}

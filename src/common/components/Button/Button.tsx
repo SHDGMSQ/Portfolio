@@ -1,5 +1,5 @@
 import React, {ReactElement} from 'react';
-import style from '../Button/Button.module.css';
+import style from './Button.module.scss';
 import {ButtonsIcons} from '../Icons/ButtonsIcon/ButtonsIcons';
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './AboutMe.module.css';
+import style from './AboutMe.module.scss';
 import styleContainer from '../../common/styles/Container.module.css';
 import {Title} from '../../common/components/Title/Title';
 import {Button} from '../../common/components/Button/Button';

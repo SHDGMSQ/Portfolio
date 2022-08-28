@@ -1,4 +1,4 @@
-import style from '../aboutMeContact/AboutMeContact.module.css';
+import style from './AboutMeContact.module.scss';
 
 export const AboutMeContact: React.FC<AboutMeContact> = ({title, description}) => {
     return <>
