@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Experience.module.css';
+import style from './Experience.module.scss';
 import styleContainer from '../../common/styles/Container.module.css';
 
 export const Experience = () => {

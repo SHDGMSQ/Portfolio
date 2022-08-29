@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Main.module.css';
+import style from './Main.module.scss';
 import stylesContainer from '../../common/styles/Container.module.css';
 import {TbBrandTelegram} from 'react-icons/tb';
 import {FaInstagram, FaSkype} from 'react-icons/fa';

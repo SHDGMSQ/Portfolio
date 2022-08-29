@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './HireScope.module.css';
+import style from './HireScope.module.scss';
 import styleContainer from '../../common/styles/Container.module.css';
 import {Button} from '../../common/components/Button/Button';
 

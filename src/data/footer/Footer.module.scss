@@ -1,0 +1,31 @@
+.footerBlock {
+    min-height: 20vh;
+    background-color: #020312;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .footerContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        .title {
+            font-family: 'Rubik', sans-serif;
+            color: #ffffff;
+            font-size: 1.875rem;
+            font-weight: 500;
+            line-height: 1.5em;
+            letter-spacing: 0.015px;
+            margin: 0
+        }
+        .copyright {
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+            margin-top: 0rem;
+        }
+    }
+}
+
+
+
+
+

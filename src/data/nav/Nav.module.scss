@@ -1,19 +1,22 @@
 .nav {
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
-}
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
 
-.nav > a {
+  & > a {
     text-decoration: none;
     color: white;
     font-weight: 400;
     font-family: 'Rubik', sans-serif;
     font-size: 1.2rem;
-}
+  }
 
-.nav > a:hover {
+  & > a:hover {
     text-decoration: underline;
     color: white;
     font-weight: 500;
+  }
 }
+
+
+
