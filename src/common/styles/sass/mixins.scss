@@ -1,0 +1,8 @@
+@import 'variables';
+
+@mixin text ($fontFamily, $fontSize, $lineHeight) {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5em;
+  color: $textColor;
+}
