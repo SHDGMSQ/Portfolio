@@ -1,10 +1,24 @@
 @import 'variables';
 
-@mixin text ($fontFamily, $fontSize, $lineHeight) {
-  font-family: 'Rubik', sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.5em;
+//basic text properties
+@mixin text ($fontFamily, $fontSize, $lineHeight, $fontWeight) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
   color: $textColor;
 }
 
-//need create mixins
+//centers the content inside the block horizontally and vertically
+@mixin centering () {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//basic background properties
+@mixin background () {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

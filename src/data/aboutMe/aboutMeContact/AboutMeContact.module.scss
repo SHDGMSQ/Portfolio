@@ -1,5 +1,7 @@
+@import "src/common/styles/sass/variables";
+
 .contactTitle {
-    color: #F26C4F;
+    color: $primaryColor;
     font-weight: bold;
 }
 .contactDescription {

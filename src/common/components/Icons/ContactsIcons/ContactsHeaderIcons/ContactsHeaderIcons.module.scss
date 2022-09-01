@@ -1,3 +1,6 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
 .inner {
   display: flex;
   flex-direction: column;
@@ -5,8 +8,9 @@
   width: 200px;
   height: 150px;
   @media screen and (max-width: 670px) {
-    justify-content: center;
-    align-items: center;
+    @include centering;
+    //justify-content: center;
+    //align-items: center;
     margin-bottom: 50px;
   }
 
@@ -18,15 +22,21 @@
   }
 
   .innerTitle {
-    color: white;
-    font-family: 'Rubik', sans-serif;
-    font-size: 1.125rem;
-    font-weight: 400;
+    @include text($titleFontFamily, 1.125rem, 1rem, 400);
+    //font-family: 'Rubik', sans-serif;
+    //font-size: 1.125rem;
+    //line-height: 1rem;
+    //font-weight: 400;
+    //color: white;
+
+
+
+
     margin-bottom: 10px;
   }
 
   .innerDescription {
-    font-family: 'Open Sans', sans-serif;
+    font-family: $descriptionFontFamily;
     color: #dfdfdf;
     font-size: 0.875rem;
   }

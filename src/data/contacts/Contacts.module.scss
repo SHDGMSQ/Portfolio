@@ -1,9 +1,14 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
 .contactsBlock {
   min-height: 150vh;
   background-image: url(https://i0.wp.com/demo.softhopper.studio/selfer/wp-content/uploads/sites/20/2018/10/bg-man-wall.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  @include background;
+  //background-position: center;
+  //background-repeat: no-repeat;
+  //background-size: cover;
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   position: relative;
   padding-bottom: 30px;
@@ -15,7 +20,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: #020312;
+    background-color: $bgColor;
     opacity: 0.92;
   }
 
@@ -43,13 +48,15 @@
     }
 
     .title {
+      @include text($titleFontFamily, 1.1rem, 1rem, 500);
+      //font-family: 'Rubik', sans-serif;
+      //font-size: 1.1rem;
+      //line-height: 1rem;
+      //font-weight: 500;
+      //color: #ffffff;
       position: relative;
       z-index: 1;
       margin: 0 0 45px 0;
-      color: #ffffff;
-      font-family: 'Rubik', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 500;
       display: flex;
       width: 100%;
       @media screen and (max-width: 670px) {
@@ -124,7 +131,7 @@
           }
 
           span {
-            color: white;
+            color: $textColor;
             margin-bottom: 5px;
           }
 
@@ -144,7 +151,7 @@
         padding: 15px 0 15px 0;
 
         span {
-          color: white;
+          color: $textColor;
           margin-bottom: 5px;
         }
 
@@ -163,7 +170,7 @@
         padding: 15px 0 15px 0;
 
         span {
-          color: white;
+          color: $textColor;
           margin-bottom: 5px;
         }
 

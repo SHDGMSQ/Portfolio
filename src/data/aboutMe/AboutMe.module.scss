@@ -1,3 +1,7 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
+
 .aboutMe {
   min-height: 150vh;
   position: relative;
@@ -18,9 +22,10 @@
 
       .photo {
         max-width: 50%;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @include background;
+        //background-position: center;
+        //background-size: cover;
+        //background-repeat: no-repeat;
         opacity: 0.3;
         width: 50%;
         height: 35rem;
@@ -32,22 +37,29 @@
 
       .innerDescription {
         max-width: 50%;
-        background: #020312;
+        background: $bgColor;
         @media screen and (max-width: 990px) {
           max-width: 100%;
           align-items: center;
         }
 
         .title {
-          color: #ffffff;
-          font-size: 1.35rem !important;
+          @include text($titleFontFamily, 1.35rem ! important, 1rem, 400);
+
+          //font-family: 'Rubik', sans-serif;
+          //font-size: 1.35rem !important;
+          //line-height: 1rem;
+          //font-weight: 400;
+          //color: #ffffff;
+
           margin-bottom: 40px;
           padding: 1.5rem 2.25rem;
-          font-weight: 400;
-          font-family: 'Rubik', sans-serif;
+
+
           @media screen and (max-width: 990px) {
-            display: flex;
-            justify-content: center;
+            @include centering;
+            //display: flex;
+            //justify-content: center;
           }
         }
 
@@ -58,8 +70,9 @@
           box-sizing: border-box;
           font-size: 1rem;
           @media screen and (max-width: 990px) {
-            display: flex;
-            justify-content: center;
+            @include centering;
+            //display: flex;
+            //justify-content: center;
           }
         }
 
@@ -111,8 +124,9 @@
           justify-content: center;
         }
         @media screen and (max-width: 460px) {
-          display: flex;
-          align-items: center;
+          @include centering;
+          //display: flex;
+          //align-items: center;
           flex-direction: column;
         }
 

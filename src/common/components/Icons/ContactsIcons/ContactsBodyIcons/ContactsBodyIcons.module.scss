@@ -1,3 +1,6 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
 .contactIcon {
   display: flex;
   align-items: center;
@@ -6,7 +9,7 @@
   }
 
   .label {
-    background: #f26c4f;
+    background: $primaryColor;
     border-radius: 50%;
     height: 3rem;
     flex: 0 0 3rem;
@@ -16,13 +19,14 @@
     width: 3rem;
     margin-right: 1rem;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centering;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
   }
 
   .text {
-    color: white;
+    color: $textColor;
     font-weight: 600;
     letter-spacing: 0.015em;
   }

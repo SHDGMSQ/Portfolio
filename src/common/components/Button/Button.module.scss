@@ -1,13 +1,14 @@
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
+
 .button {
   width: 11rem;
   height: 3rem;
-  background-color: #f26c4f;
+  background-color: $primaryColor;
   position: relative;
   z-index: 1;
-  color: white;
-  font-family: 'Rubik', sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
+
+  @include text($titleFontFamily, 1rem, 1rem, 500);
   text-transform: uppercase;
   border: none;
 
@@ -16,9 +17,10 @@
   }
 
   .innerButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centering;
+    //display: flex;
+    //justify-content: center;
+    //align-items: center;
 
     .buttonTitle {
       margin-right: 0.3rem;
