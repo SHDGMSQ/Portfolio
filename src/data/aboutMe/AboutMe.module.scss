@@ -7,14 +7,12 @@
   position: relative;
 
   .aboutMeContainer {
-    flex-direction: column;
-    justify-content: flex-start;
+    @include contentLocation(none, flex-start, none, column);
 
     .innerContainer {
-      display: flex;
+      @include contentLocation(flex, none, self-end, none);
       flex-wrap: wrap;
       width: 100%;
-      align-items: self-end;
       @media screen and (max-width: 990px) {
         align-items: center;
         padding-bottom: 2rem
@@ -23,9 +21,6 @@
       .photo {
         max-width: 50%;
         @include background;
-        //background-position: center;
-        //background-size: cover;
-        //background-repeat: no-repeat;
         opacity: 0.3;
         width: 50%;
         height: 35rem;
@@ -44,35 +39,24 @@
         }
 
         .title {
-          @include text($titleFontFamily, 1.35rem ! important, 1rem, 400);
-
-          //font-family: 'Rubik', sans-serif;
-          //font-size: 1.35rem !important;
-          //line-height: 1rem;
-          //font-weight: 400;
-          //color: #ffffff;
-
+          @include text($titleFontFamily, 1.35rem ! important, 1rem, 400, $textTitleColor);
           margin-bottom: 40px;
           padding: 1.5rem 2.25rem;
 
 
           @media screen and (max-width: 990px) {
-            @include centering;
-            //display: flex;
-            //justify-content: center;
+            @include contentLocation(flex, center, none, none);
           }
         }
 
         .description {
           line-height: 1.6875rem;
           margin-bottom: 1.875rem;
-          color: #dfdfdf;
+          color: $textDescriptionColor;
           box-sizing: border-box;
           font-size: 1rem;
           @media screen and (max-width: 990px) {
-            @include centering;
-            //display: flex;
-            //justify-content: center;
+            @include contentLocation(flex, center, none, none);
           }
         }
 
@@ -86,8 +70,7 @@
           }
 
           .contacts {
-            display: flex;
-            justify-content: flex-start;
+            @include contentLocation(flex, flex-start, none, none);
             height: 7rem;
             @media screen and (max-width: 1023px) {
               height: 8rem;
@@ -124,9 +107,7 @@
           justify-content: center;
         }
         @media screen and (max-width: 460px) {
-          @include centering;
-          //display: flex;
-          //align-items: center;
+          @include contentLocation(flex, none, center, none);
           flex-direction: column;
         }
 

@@ -5,20 +5,10 @@
   min-height: 100vh;
   background-image: url(https://i0.wp.com/demo.softhopper.studio/selfer/wp-content/uploads/sites/20/2018/10/bg-man-wall.jpg);
   @include background;
-  //background-position: center;
-  //background-repeat: no-repeat;
-  //background-size: cover;
   position: relative;
 
   &:before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: $bgColor;
-    opacity: 0.92;
+    @include pseudo('', none, none, absolute, 0, 0, 0, 0, 0.92, $bgColor);
   }
 
   @media screen and (max-width: 940px) {
@@ -42,8 +32,7 @@
   }
 
   .mainContainer {
-    display: flex;
-    flex-direction: column;
+    @include contentLocation(flex, none, none, column);
     position: relative;
     width: 70%;
     @media screen and (max-width: 625px) {
@@ -56,9 +45,7 @@
     }
 
     .text {
-      color: $textColor;
-      font-family: $titleFontFamily;
-      font-size: 45px;
+      @include text($titleFontFamily, 45px, none, none, $textTitleColor);
       margin-top: 5vh;
       @media screen and (max-width: 940px) {
         font-size: 40px;
@@ -82,9 +69,7 @@
       }
 
       .description {
-        font-family: $titleFontFamily;
-        font-size: 35px;
-        font-weight: 400;
+        @include text($titleFontFamily, 35px, none, 400, none);
         @media screen and (max-width: 800px) {
           font-size: 30px;
         }

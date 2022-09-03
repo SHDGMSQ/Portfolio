@@ -1,9 +1,8 @@
 @import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include contentLocation(flex, none, center, column);
     text-align: center;
     height: 100vh;
     color: $primaryColor;

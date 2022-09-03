@@ -1,11 +1,10 @@
 @import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
 
 .header {
   min-height: 5vh;
   background-color: $bgColor;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  @include contentLocation(flex, flex-end, center, none);
   position: fixed;
   top: 0;
   right: 0;

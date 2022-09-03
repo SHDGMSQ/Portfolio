@@ -8,7 +8,7 @@
   position: relative;
   z-index: 1;
 
-  @include text($titleFontFamily, 1rem, 1rem, 500);
+  @include text($titleFontFamily, 1rem, 1em, 500, $textTitleColor);
   text-transform: uppercase;
   border: none;
 
@@ -18,9 +18,6 @@
 
   .innerButton {
     @include centering;
-    //display: flex;
-    //justify-content: center;
-    //align-items: center;
 
     .buttonTitle {
       margin-right: 0.3rem;

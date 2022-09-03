@@ -1,11 +1,12 @@
-
+@import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
 
 .experience {
-    min-height: 50vh;
-    position: relative;
-.experienceContainer {
-    flex-direction: column;
-    justify-content: flex-start;
-}
+  min-height: 50vh;
+  position: relative;
+
+  .experienceContainer {
+    @include contentLocation(none, flex-start, none, column);
+  }
 }
 

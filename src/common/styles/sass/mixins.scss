@@ -1,12 +1,12 @@
 @import 'variables';
 
 //basic text properties
-@mixin text ($fontFamily, $fontSize, $lineHeight, $fontWeight) {
+@mixin text ($fontFamily, $fontSize, $lineHeight, $fontWeight, $color) {
   font-family: $fontFamily;
   font-size: $fontSize;
   line-height: $lineHeight;
   font-weight: $fontWeight;
-  color: $textColor;
+  color: $color;
 }
 
 //centers the content inside the block horizontally and vertically
@@ -16,9 +16,31 @@
   align-items: center;
 }
 
+//basic properties for content
+@mixin contentLocation ($display, $justify, $align, $direction) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
 //basic background properties
 @mixin background () {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+//properties for pseudo
+@mixin pseudo ($content, $width, $height, $position, $l, $t, $r, $b, $opacity, $background) {
+  content: $content;
+  width: $width;
+  height: $height;
+  position: $position;
+  left: $l;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  opacity: $opacity;
+  background: $background;
 }

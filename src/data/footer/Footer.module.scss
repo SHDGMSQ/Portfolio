@@ -2,33 +2,26 @@
 @import "src/common/styles/sass/mixins";
 
 .footerBlock {
-    min-height: 20vh;
-    background-color: $bgColor;
+  min-height: 20vh;
+  background-color: $bgColor;
+  @include centering;
 
-    @include centering;
-    //display: flex;
-    //align-items: center;
-    //justify-content: center;
-    .footerContainer {
-        flex-direction: column;
-        justify-content: flex-start;
-        width: 100%;
-        .title {
-            @include text($titleFontFamily,1.875rem, 1.5em, 500);
-            //font-family: 'Rubik', sans-serif;
-            //color: #ffffff;
-            //font-size: 1.875rem;
-            //font-weight: 500;
-            //line-height: 1.5em;
-            letter-spacing: 0.015px;
-            margin: 0
-        }
-        .copyright {
-            color: $textColor;
-            font-family: $descriptionFontFamily;
-            margin-top: 0rem;
-        }
+  .footerContainer {
+    @include contentLocation(none, flex-start, none, column);
+    width: 100%;
+
+    .title {
+      @include text($titleFontFamily, 1.875rem, 1.5em, 500, $textTitleColor);
+      letter-spacing: 0.015px;
+      margin: 0
     }
+
+    .copyright {
+      color: $textTitleColor;
+      font-family: $descriptionFontFamily;
+      margin-top: 0rem;
+    }
+  }
 }
 
 

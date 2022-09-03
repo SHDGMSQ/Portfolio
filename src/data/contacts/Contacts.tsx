@@ -20,7 +20,7 @@ export const Contacts = () => {
             <div className={style.contactsBlock}>
                 <div className={`${styleContainer.container} ${style.contactsContainer}`}>
                     <Title title={'Contacts'}/>
-                    <div className={style.adressContainer}>
+                    <div className={style.addressContainer}>
                         <ContactsHeaderIcons
                             logo={<TiLocationOutline/>}
                             title={'Address'}

@@ -4,24 +4,13 @@
 .contactsBlock {
   min-height: 150vh;
   background-image: url(https://i0.wp.com/demo.softhopper.studio/selfer/wp-content/uploads/sites/20/2018/10/bg-man-wall.jpg);
-
   @include background;
-  //background-position: center;
-  //background-repeat: no-repeat;
-  //background-size: cover;
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   position: relative;
   padding-bottom: 30px;
 
   &::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: $bgColor;
-    opacity: 0.92;
+    @include pseudo('', none, none, absolute, 0, 0, 0, 0, 0.92, $bgColor);
   }
 
   @media screen and (max-width: 670px) {
@@ -29,10 +18,9 @@
   }
 
   .contactsContainer {
-    flex-direction: column;
-    justify-content: flex-start;
+    @include contentLocation(none, flex-start, none, column);
 
-    .adressContainer {
+    .addressContainer {
       position: relative;
       z-index: 1;
       display: flex;
@@ -40,20 +28,14 @@
       margin: 0 0 45px 0;
       padding: 0 6rem 0 0;
       @media screen and (max-width: 670px) {
-        align-items: center;
+        @include contentLocation(none, none, center, column);
         margin: 0;
-        flex-direction: column;
         padding: 0;
       }
     }
 
     .title {
-      @include text($titleFontFamily, 1.1rem, 1rem, 500);
-      //font-family: 'Rubik', sans-serif;
-      //font-size: 1.1rem;
-      //line-height: 1rem;
-      //font-weight: 500;
-      //color: #ffffff;
+      @include text($titleFontFamily, 1.1rem, 1rem, 500, $textTitleColor);
       position: relative;
       z-index: 1;
       margin: 0 0 45px 0;
@@ -67,8 +49,7 @@
     .contactIcons {
       position: relative;
       z-index: 1;
-      display: flex;
-      justify-content: space-between;
+      @include contentLocation(flex, space-between, none, none);
       width: 100%;
       margin: 0 0 45px 0;
       @media screen and (max-width: 670px) {
@@ -80,26 +61,21 @@
     }
 
     .formContainer {
-      display: flex;
-      flex-direction: column;
+      @include contentLocation(flex, space-between, none, column);
       position: relative;
       z-index: 1;
       width: 100%;
-      justify-content: space-between;
       flex-wrap: wrap;
 
       .nameEmail {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include contentLocation(flex, space-between, none, row);
         @media screen and (max-width: 456px) {
           flex-direction: column;
         }
 
         .name {
-          display: flex;
+          @include contentLocation(flex, none, none, column);
           flex: 0 0 50%;
-          flex-direction: column;
           padding: 15px;
           margin-left: -15px;
           @media screen and (max-width: 456px) {
@@ -107,7 +83,7 @@
           }
 
           span {
-            color: white;
+            color: $textTitleColor;
             margin-bottom: 5px;
           }
 
@@ -121,9 +97,8 @@
         }
 
         .email {
-          display: flex;
+          @include contentLocation(flex, none, none, column);
           flex: 0 0 50%;
-          flex-direction: column;
           padding: 15px;
           margin-right: -15px;
           @media screen and (max-width: 456px) {
@@ -131,7 +106,7 @@
           }
 
           span {
-            color: $textColor;
+            color: $textTitleColor;
             margin-bottom: 5px;
           }
 
@@ -146,12 +121,11 @@
       }
 
       .subject {
-        display: flex;
-        flex-direction: column;
+        @include contentLocation(flex, none, none, column);
         padding: 15px 0 15px 0;
 
         span {
-          color: $textColor;
+          color: $textTitleColor;
           margin-bottom: 5px;
         }
 
@@ -165,12 +139,11 @@
       }
 
       .message {
-        display: flex;
-        flex-direction: column;
+        @include contentLocation(flex, none, none, column);
         padding: 15px 0 15px 0;
 
         span {
-          color: $textColor;
+          color: $textTitleColor;
           margin-bottom: 5px;
         }
 
@@ -185,8 +158,7 @@
     }
 
     .buttonContainer {
-      display: flex;
-      justify-content: flex-end;
+      @include contentLocation(flex, flex-end, none, none);
       width: 100%;
       @media screen and (max-width: 670px) {
         justify-content: center;

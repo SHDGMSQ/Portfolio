@@ -2,15 +2,12 @@
 @import "src/common/styles/sass/mixins";
 
 .inner {
-  display: flex;
-  flex-direction: column;
+  @include contentLocation(flex, none, none, column);
   flex: 1rem 1rem 0;
   width: 200px;
   height: 150px;
   @media screen and (max-width: 670px) {
     @include centering;
-    //justify-content: center;
-    //align-items: center;
     margin-bottom: 50px;
   }
 
@@ -22,22 +19,11 @@
   }
 
   .innerTitle {
-    @include text($titleFontFamily, 1.125rem, 1rem, 400);
-    //font-family: 'Rubik', sans-serif;
-    //font-size: 1.125rem;
-    //line-height: 1rem;
-    //font-weight: 400;
-    //color: white;
-
-
-
-
+    @include text($titleFontFamily, 1.125rem, 1rem, 400, $textTitleColor);
     margin-bottom: 10px;
   }
 
   .innerDescription {
-    font-family: $descriptionFontFamily;
-    color: #dfdfdf;
-    font-size: 0.875rem;
+    @include text($descriptionFontFamily, 0.875rem, none, none, $textDescriptionColor);
   }
 }

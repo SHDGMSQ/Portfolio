@@ -4,27 +4,17 @@
 .skill {
     width: 250px;
     background-color: $bgSecondColor;
-    @include centering;
-    //display: flex;
-    //align-items: center;
-    //justify-content: center;
-    flex-direction: column;
+    @include contentLocation(flex, center, center, column);
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
     margin-bottom: 30px;
     .title h4 {
-        @include text($titleFontFamily, 1.5rem, 1.5em, 500);
-        //font-family: 'Rubik', sans-serif;
-        //color: #ffffff;
-        //font-size: 1.5rem;
-        //font-weight: 500;
-        //line-height: 1.5em;
+        @include text($titleFontFamily, 1.5rem, 1.5em, 500, $textTitleColor);
         margin: 20px 0px 20px 0px;
     }
     .description {
-        font-family: $descriptionFontFamily;
-        color: #dfdfdf;
+        @include text($descriptionFontFamily, none, none, none, $textDescriptionColor);
     }
 }
 

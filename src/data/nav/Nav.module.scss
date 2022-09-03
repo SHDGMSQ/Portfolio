@@ -1,22 +1,18 @@
 @import "src/common/styles/sass/variables";
+@import "src/common/styles/sass/mixins";
 
 .nav {
   width: 300px;
-  display: flex;
-  justify-content: space-between;
+  @include contentLocation(flex, space-between, none, none);
 
   & > a {
     text-decoration: none;
-    color: $textColor;
-    font-weight: 400;
-    font-family: $titleFontFamily;
-    font-size: 1.2rem;
+    @include text($titleFontFamily, 1.2rem, none, 400, $textTitleColor);
   }
 
   & > a:hover {
     text-decoration: underline;
-    color: $textColor;
-    font-weight: 500;
+    @include text(none, none, none, 500, $textTitleColor);
   }
 }
 
