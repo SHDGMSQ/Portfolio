@@ -3,6 +3,10 @@
 
 .hireBlock {
   min-height: 25vh;
+  margin: 90px 0 90px 0;
+  @media screen and (max-width: 990px) {
+    margin: 0 0 30px 0;
+  }
 
   .hireContainer {
     @include centering;
@@ -11,6 +15,7 @@
     position: relative;
     @include background;
     background-image: url(https://i0.wp.com/demo.softhopper.studio/selfer/wp-content/uploads/sites/20/2018/10/bg-keyboard.jpg);
+
 
     &::before {
       @include pseudo('', absolute, 0, 0, 0, 0, 0.92, $bgColor);

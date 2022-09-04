@@ -16,7 +16,7 @@ export const AboutMe = () => {
 
     return (
         <>
-            <div className={style.aboutMe}>
+            <div className={style.aboutMe} id='aboutMe'>
                 <div className={`${styleContainer.container} ${style.aboutMeContainer}`}>
                     <Title title={'About me'}/>
                     <div className={style.innerContainer}>

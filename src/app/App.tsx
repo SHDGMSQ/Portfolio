@@ -11,7 +11,6 @@ import {Header} from '../data/header/Header';
 import {HireScope} from '../data/hireScope/HireScope';
 import {Footer} from '../data/footer/Footer';
 import {AboutMe} from '../data/aboutMe/AboutMe';
-import {Experience} from '../data/experience/Experience';
 
 export enum PATH {
     HOME = '/',
@@ -62,7 +61,7 @@ export const App = () => {
                     <Skills/>
                     <AboutMe/>
                     <HireScope/>
-                    <Experience/>
+                    {/*<Experience/>*/}
                     <Projects/>
                     <Contacts/>
                     <Footer/>

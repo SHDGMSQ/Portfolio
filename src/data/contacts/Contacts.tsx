@@ -17,7 +17,7 @@ export const Contacts = () => {
 
     return (
         <>
-            <div className={style.contactsBlock}>
+            <div className={style.contactsBlock} id='contacts'>
                 <div className={`${styleContainer.container} ${style.contactsContainer}`}>
                     <Title title={'Contacts'}/>
                     <div className={style.addressContainer}>
