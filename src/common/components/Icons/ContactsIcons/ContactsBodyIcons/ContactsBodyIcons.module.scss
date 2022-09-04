@@ -2,7 +2,8 @@
 @import "src/common/styles/sass/mixins";
 
 .contactIcon {
-  @include contentLocation (flex, none, center, none);
+  display: flex;
+  align-items: center;
   @media screen and (max-width: 670px) {
     margin-bottom: 10px;
   }

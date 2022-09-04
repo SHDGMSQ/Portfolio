@@ -4,7 +4,9 @@
 .project {
   width: 250px;
   background-color: $bgSecondColor;
-  @include contentLocation(flex, none, flex-start, column);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
   @media screen and (max-width: 628px) {
     margin-bottom: 30px;
   }
@@ -17,19 +19,20 @@
     position: relative;
 
     &::before {
-      @include pseudo('', none, none, absolute, 0, 0, 0, 0, 0.4, black);
+      @include pseudo('', absolute, 0, 0, 0, 0, 0.4, black);
     }
   }
 
   .projectName {
-    @include text($titleFontFamily, 1.2rem, 1.5em, 300, $textTitleColor);
+    @include text($titleFontFamily, 1.2rem, 300, $textTitleColor);
+    line-height: 1.5em;
     margin: 5% auto 0 auto;
   }
 
   .description {
     margin-top: 5%;
     margin-left: 10%;
-    @include text($descriptionFontFamily, none, none, none, $textDescriptionColor);
+    @include text($descriptionFontFamily, 1em, normal, $textDescriptionColor);
     @media screen and (max-width: 628px) {
       margin: 0 auto;
     }

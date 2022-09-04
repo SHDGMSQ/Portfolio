@@ -4,7 +4,9 @@
 .header {
   min-height: 5vh;
   background-color: $bgColor;
-  @include contentLocation(flex, flex-end, center, none);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   position: fixed;
   top: 0;
   right: 0;

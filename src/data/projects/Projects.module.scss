@@ -6,11 +6,13 @@
   background-color: rgba(29, 33, 36, 0.3);
 
   .projectsContainer {
-    @include contentLocation(none, flex-start, none, column);
+    justify-content: flex-start;
+    flex-direction: column;
 
     .projects {
       width: 100%;
-      @include contentLocation(flex, space-between, none, none);
+      display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
       @media screen and (max-width: 628px) {
           display: block;

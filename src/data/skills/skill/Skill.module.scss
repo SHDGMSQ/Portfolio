@@ -4,17 +4,19 @@
 .skill {
     width: 250px;
     background-color: $bgSecondColor;
-    @include contentLocation(flex, center, center, column);
+    flex-direction: column;
+    @include centering;
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
     margin-bottom: 30px;
     .title h4 {
-        @include text($titleFontFamily, 1.5rem, 1.5em, 500, $textTitleColor);
-        margin: 20px 0px 20px 0px;
+        @include text($titleFontFamily, 1.5rem, 500, $textTitleColor);
+        line-height: 1.5em;
+        margin: 20px 0 20px 0;
     }
     .description {
-        @include text($descriptionFontFamily, none, none, none, $textDescriptionColor);
+        @include text($descriptionFontFamily, 1em, normal, $textDescriptionColor);
     }
 }
 

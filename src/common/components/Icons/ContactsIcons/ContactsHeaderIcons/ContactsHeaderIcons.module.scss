@@ -2,7 +2,8 @@
 @import "src/common/styles/sass/mixins";
 
 .inner {
-  @include contentLocation(flex, none, none, column);
+  display: flex;
+  flex-direction: column;
   flex: 1rem 1rem 0;
   width: 200px;
   height: 150px;
@@ -19,11 +20,11 @@
   }
 
   .innerTitle {
-    @include text($titleFontFamily, 1.125rem, 1rem, 400, $textTitleColor);
+    @include text($titleFontFamily, 1.125rem, 400 ,$textTitleColor);
     margin-bottom: 10px;
   }
 
   .innerDescription {
-    @include text($descriptionFontFamily, 0.875rem, none, none, $textDescriptionColor);
+    @include text($descriptionFontFamily, 0.875rem, normal, $textDescriptionColor);
   }
 }

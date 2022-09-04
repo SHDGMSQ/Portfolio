@@ -3,16 +3,17 @@
 
 .nav {
   width: 300px;
-  @include contentLocation(flex, space-between, none, none);
+  display: flex;
+  justify-content: space-between;
 
   & > a {
     text-decoration: none;
-    @include text($titleFontFamily, 1.2rem, none, 400, $textTitleColor);
+    @include text($titleFontFamily, 1.2rem, 400, $textTitleColor);
   }
 
   & > a:hover {
     text-decoration: underline;
-    @include text(none, none, none, 500, $textTitleColor);
+    @include text($titleFontFamily, 1.2em, 500, $textTitleColor);
   }
 }
 

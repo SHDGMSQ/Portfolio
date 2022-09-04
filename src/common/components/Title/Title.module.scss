@@ -8,7 +8,8 @@
   z-index: 1;
 
   h2 {
-    @include text($titleFontFamily, 1.875rem, 1.5em, 500, $textTitleColor);
+    @include text($titleFontFamily, 1.875rem, 500, $textTitleColor);
+    line-height: 1.5em;
     text-transform: uppercase;
     letter-spacing: 0.015px;
     margin: 0
@@ -20,29 +21,23 @@
     margin-bottom: 30px;
 
     &::before {
-      @include pseudo('', 25px, 1px, absolute, -50px, 12px, none, none, 0.75, $primaryColor);
+      width: 25px;
+      height: 1px;
+      @include pseudo('', absolute, -50px, 12px, 0, 0, 0.75, $primaryColor);
     }
 
     &::after {
-      @include pseudo('', 25px, 1px, absolute, none, 12px, -50px, none, 0.75, $primaryColor);
+      width: 25px;
+      height: 1px;
+      @include pseudo('', absolute, auto, 12px, -50px, auto, 0.75, $primaryColor);
     }
 
     span:nth-child(1) {
-      position: absolute;
-      width: 2px;
-      height: 25px;
-      border-right: 2px dotted;
-      transform: rotate(45deg);
-      border-right-color: $primaryColor
+      @include titlePseudo(rotate(45deg));
     }
 
     span:nth-child(2) {
-      position: absolute;
-      width: 2px;
-      height: 25px;
-      border-right: 2px dotted;
-      transform: rotate(-45deg);
-      border-right-color: $primaryColor
+      @include titlePseudo(rotate(-45deg));
     }
   }
 }

@@ -7,11 +7,13 @@
   @include centering;
 
   .footerContainer {
-    @include contentLocation(none, flex-start, none, column);
+    justify-content: flex-start;
+    flex-direction: column;
     width: 100%;
 
     .title {
-      @include text($titleFontFamily, 1.875rem, 1.5em, 500, $textTitleColor);
+      @include text($titleFontFamily, 1.875rem, 500, $textTitleColor);
+      line-height: 1.5em;
       letter-spacing: 0.015px;
       margin: 0
     }
@@ -19,7 +21,7 @@
     .copyright {
       color: $textTitleColor;
       font-family: $descriptionFontFamily;
-      margin-top: 0rem;
+      margin-top: 0;
     }
   }
 }

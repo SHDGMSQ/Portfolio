@@ -10,7 +10,7 @@
   padding-bottom: 30px;
 
   &::before {
-    @include pseudo('', none, none, absolute, 0, 0, 0, 0, 0.92, $bgColor);
+    @include pseudo('', absolute, 0, 0, 0, 0, 0.92, $bgColor);
   }
 
   @media screen and (max-width: 670px) {
@@ -18,7 +18,8 @@
   }
 
   .contactsContainer {
-    @include contentLocation(none, flex-start, none, column);
+    justify-content: flex-start;
+    flex-direction: column;
 
     .addressContainer {
       position: relative;
@@ -28,14 +29,15 @@
       margin: 0 0 45px 0;
       padding: 0 6rem 0 0;
       @media screen and (max-width: 670px) {
-        @include contentLocation(none, none, center, column);
+        align-items: center;
+        flex-direction: column;
         margin: 0;
         padding: 0;
       }
     }
 
     .title {
-      @include text($titleFontFamily, 1.1rem, 1rem, 500, $textTitleColor);
+      @include text($titleFontFamily, 1.1rem, 500, $textTitleColor);
       position: relative;
       z-index: 1;
       margin: 0 0 45px 0;
@@ -49,7 +51,8 @@
     .contactIcons {
       position: relative;
       z-index: 1;
-      @include contentLocation(flex, space-between, none, none);
+      display: flex;
+      justify-content: space-between;
       width: 100%;
       margin: 0 0 45px 0;
       @media screen and (max-width: 670px) {
@@ -61,20 +64,25 @@
     }
 
     .formContainer {
-      @include contentLocation(flex, space-between, none, column);
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
       position: relative;
       z-index: 1;
       width: 100%;
       flex-wrap: wrap;
 
       .nameEmail {
-        @include contentLocation(flex, space-between, none, row);
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
         @media screen and (max-width: 456px) {
           flex-direction: column;
         }
 
         .name {
-          @include contentLocation(flex, none, none, column);
+          display: flex;
+          flex-direction: column;
           flex: 0 0 50%;
           padding: 15px;
           margin-left: -15px;
@@ -97,7 +105,8 @@
         }
 
         .email {
-          @include contentLocation(flex, none, none, column);
+          display: flex;
+          flex-direction: column;
           flex: 0 0 50%;
           padding: 15px;
           margin-right: -15px;
@@ -121,7 +130,8 @@
       }
 
       .subject {
-        @include contentLocation(flex, none, none, column);
+        display: flex;
+        flex-direction: column;
         padding: 15px 0 15px 0;
 
         span {
@@ -139,7 +149,8 @@
       }
 
       .message {
-        @include contentLocation(flex, none, none, column);
+        display: flex;
+        flex-direction: column;
         padding: 15px 0 15px 0;
 
         span {
@@ -158,7 +169,8 @@
     }
 
     .buttonContainer {
-      @include contentLocation(flex, flex-end, none, none);
+      display: flex;
+      justify-content: flex-end;
       width: 100%;
       @media screen and (max-width: 670px) {
         justify-content: center;

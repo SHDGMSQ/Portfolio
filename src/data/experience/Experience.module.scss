@@ -6,7 +6,8 @@
   position: relative;
 
   .experienceContainer {
-    @include contentLocation(none, flex-start, none, column);
+    justify-content: flex-start;
+    flex-direction: column;
   }
 }
 

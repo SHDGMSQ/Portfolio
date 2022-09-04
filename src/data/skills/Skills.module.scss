@@ -1,18 +1,19 @@
 @import "src/common/styles/sass/variables";
 @import "src/common/styles/sass/mixins";
 
-//need to change my mixins
 
 .skillsBlock {
   min-height: 100vh;
   background-color: rgba(29, 33, 36, 0.3);
 
   .skillsContainer {
-    @include contentLocation(none, flex-start, none, column);
+    justify-content: flex-start;
+    flex-direction: column;
 
     .skills {
       width: 100%;
-      @include contentLocation(flex, space-between, none, none);
+      display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
       @media screen and (max-width: 625px) {
         justify-content: center;
