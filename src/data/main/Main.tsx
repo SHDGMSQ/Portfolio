@@ -6,12 +6,16 @@ import {FaInstagram, FaWhatsapp} from 'react-icons/fa';
 import {IoLogoLinkedin} from 'react-icons/io';
 import {BsGithub} from 'react-icons/bs';
 import {MainIcons} from '../../common/components/Icons/MainIcons/MainIcons';
+import photo from '../../assets/photo/myPhotoMain.jpg'
 
 
 export const Main = () => {
+
+    const mainPhoto = {backgroundImage:`url(${photo})`}
+
     return (
         <>
-            <div className={style.mainBlock} id='main'>
+            <div className={style.mainBlock} id='main' style={mainPhoto}>
                 <div className={stylesContainer.container}>
                     <div className={style.mainContainer}>
                         <div className={style.contacts}>

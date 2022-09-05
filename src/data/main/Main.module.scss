@@ -3,12 +3,11 @@
 
 .mainBlock {
   min-height: 100vh;
-  background-image: url(https://i0.wp.com/demo.softhopper.studio/selfer/wp-content/uploads/sites/20/2018/10/bg-man-wall.jpg);
   @include background;
   position: relative;
 
   &:before {
-    @include pseudo('', absolute, 0, 0, 0, 0, 0.92, $bgColor);
+    @include pseudo('', absolute, 0, 0, 0, 0, 0.75, $bgColor);
   }
 
   @media screen and (max-width: 940px) {
