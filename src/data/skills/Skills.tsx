@@ -19,14 +19,14 @@ export const Skills = () => {
                     <Title title={'My Skills'}/>
                     <div className={style.skills}>
                         <Skill title={'React/Redux'}
-                               description="React"
+                               description="Creating pure components, functional programming paradigm, flux-architecture, using a state management (Redux, Store), using action creators, thunks, middleware, application optimization with React.Memo, useMemo, React Hooks, useAppSelector, useAppDispatch"
                                skillIcon={
                                    <SkillsIcons
                                        logoComponent={<FaReact/>}
                                    />}
                         />
                         <Skill title={'JS/TS'}
-                               description="js"
+                               description="Single responsibility principle, using methods of array (map, filter, find), bubble sort, SOLID, OOP, inheritance, prototypes, recursion, try/catch, microtasks, immutability, use of typing data (variables, functions, objects, requests, responses, thunks)"
                                skillIcon={
                                    <SkillsIcons logoComponent={
                                        <SiTypescript/>
