@@ -19,35 +19,35 @@ export const Skills = () => {
                     <Title title={'My Skills'}/>
                     <div className={style.skills}>
                         <Skill title={'React/Redux'}
-                               description="Creating pure components, functional programming paradigm, flux-architecture, using a state management (Redux, Store), using action creators, thunks, middleware, application optimization with React.Memo, useMemo, React Hooks, useAppSelector, useAppDispatch"
+                               description="Creating pure components, functional programming paradigm, flux-architecture, using a state management (Redux, Store), using action creators, thunks, middleware, children, application optimization with React.Memo, useMemo, React Hooks, useAppSelector, useAppDispatch."
                                skillIcon={
                                    <SkillsIcons
                                        logoComponent={<FaReact/>}
                                    />}
                         />
                         <Skill title={'JS/TS'}
-                               description="Single responsibility principle, using methods of array (map, filter, find), bubble sort, SOLID, OOP, inheritance, prototypes, recursion, try/catch, microtasks, immutability, use of typing data (variables, functions, objects, requests, responses, thunks)"
+                               description="Single responsibility principle, using methods of array (map, filter, find), bubble sort, SOLID, OOP, inheritance, prototypes, recursion, try/catch, microtasks, immutability, use of typing data (variables, functions, objects, requests, responses, thunks)."
                                skillIcon={
                                    <SkillsIcons logoComponent={
                                        <SiTypescript/>
                                    }/>}
                         />
                         <Skill title={'CSS3(Sass)'}
-                               description="2"
+                               description="Web page styling, creating a responsive layout, using modules, sass nesting, variables, creating mixins, media queries, flex, grid, responsive menu, pseudo elements, import modules with tag 'style', creating animations with libraries or pure css code, transitions, positioning. "
                                skillIcon={
                                    <SkillsIcons logoComponent={
                                        <FaSass/>
                                    }/>}
                         />
                         <Skill title={'Rest API'}
-                               description="1"
+                               description="Creating requests, get, post, put, patch, delete requests, request payload, response data, type for requests and responses, use axios, async/await, thunks, optimization requests to endpoints with creating universal object with base settings (baseURL, withCredentials)."
                                skillIcon={
                                    <SkillsIcons logoComponent={
                                        <TbApi/>
                                    }/>}
                         />
                         <Skill title={'Git/Github'}
-                               description="1"
+                               description="Сollaborative development experience, using commands git checkout, git fetch, git merge for work with branches, reverting commits (reset mixed, reset hard), using base commands like git init, git commit, git push and using github.io for presentation applications."
                                skillIcon={
                                    <SkillsIcons logoComponent={
                                        <FaGithub/>
