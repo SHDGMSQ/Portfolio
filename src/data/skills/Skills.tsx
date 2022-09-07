@@ -19,7 +19,7 @@ export const Skills = () => {
                     <Title title={'My Skills'}/>
                     <div className={style.skills}>
                         <Skill title={'React/Redux'}
-                               description="Creating pure components, functional programming paradigm, flux-architecture, using a state management (Redux, Store), using action creators, thunks, middleware, children, application optimization with React.Memo, useMemo, React Hooks, useAppSelector, useAppDispatch."
+                               description="Creating pure components, functional programming paradigm, flux-architecture, using a state management (Redux, Store), using reducers, action creators, thunks, middleware, children, application optimization with React.Memo, useMemo, React Hooks."
                                skillIcon={
                                    <SkillsIcons
                                        logoComponent={<FaReact/>}
@@ -68,7 +68,7 @@ export const Skills = () => {
                                    }/>}
                         />
                         <Skill title={'Unit Tests'}
-                               description="1"
+                               description="Creating tests to improve the quality of the code, saving resources and time to find application errors, using the TDD (Test-Driven Development) methodology, creating tests for application reducers in order to check the correct operation of the logic"
                                skillIcon={
                                    <SkillsIcons logoComponent={
                                        <AiOutlineDeploymentUnit/>

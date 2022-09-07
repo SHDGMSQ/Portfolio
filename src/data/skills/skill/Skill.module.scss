@@ -17,6 +17,7 @@
     }
     .description {
         @include text($descriptionFontFamily, 1em, normal, $textDescriptionColor);
+        text-align: initial;
     }
 }
 

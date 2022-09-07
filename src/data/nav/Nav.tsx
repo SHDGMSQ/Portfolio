@@ -27,7 +27,7 @@ export const Nav = () => {
                   to="aboutMe"
                   spy={true}
                   smooth={true}
-                  offset={-15}
+                  offset={-30}
                   duration={500}
             >
                 About Me
