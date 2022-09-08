@@ -47,21 +47,21 @@ export const Skills = () => {
                                    }/>}
                         />
                         <Skill title={'Git/Github'}
-                               description="Сollaborative development experience, using commands git checkout, git fetch, git merge for work with branches, reverting commits (reset mixed, reset hard), using base commands like git init, git commit, git push and using github.io for presentation applications."
+                               description="Сollaborative development experience, using commands git checkout, git fetch, git merge for work with branches, reverting commits (reset mixed, reset hard), using commands like git init, git commit, git push and using github.io for presentation applications."
                                skillIcon={
                                    <SkillsIcons logoComponent={
                                        <FaGithub/>
                                    }/>}
                         />
                         <Skill title={'Material-UI'}
-                               description="1"
+                               description="Styling class components, styling functional using react hooks, material components, styling with styledComponent, redefining material components, theme for providing default styles for the project with accessibility through the provider."
                                skillIcon={
                                    <SkillsIcons logoComponent={
                                        <SiMaterialui/>
                                    }/>}
                         />
                         <Skill title={'Storybook'}
-                               description="1"
+                               description="use to create a library of components, test components within the current task, develop components in an isolated environment for reuse in any part of the project, create documentation based on the created components."
                                skillIcon={
                                    <SkillsIcons logoComponent={
                                        <SiStorybook/>
