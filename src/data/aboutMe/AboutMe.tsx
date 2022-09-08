@@ -24,9 +24,7 @@ export const AboutMe = () => {
                         </div>
                         <div className={style.innerDescription}>
                             <div className={style.title}><h4>Hi There</h4></div>
-                            <div className={style.description}>In id nulla magna. Nullam posuere fermentum mattis. Nunc
-                                id dui at sapien faucibus fermentum ut vel diam. Nullam tempus, nunc id efficitur
-                                sagittis, urna est ultricies eros, ac porta sem turpis quis leo. Nulla in feugiat elit.
+                            <div className={style.description}>I am a positive and result oriented front-end developer with experience building landing pages and SPA, using React (JS, TS), Redux, HTML and CSS (SCSS). I speak English at an Intermediate level. In my free time I improve my skills and English. I would like to find a project work/full-time job in a creative company with up-to-date task and collaborative team!
                             </div>
                             <div className={style.contactsContainer}>
                                 <div className={style.contacts}>

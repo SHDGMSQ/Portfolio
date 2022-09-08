@@ -61,7 +61,7 @@ export const Skills = () => {
                                    }/>}
                         />
                         <Skill title={'Storybook'}
-                               description="use to create a library of components, test components within the current task, develop components in an isolated environment for reuse in any part of the project, create documentation based on the created components."
+                               description="Use to create a library of components, test components within the current task, develop components in an isolated environment for reuse in any part of the project, create documentation based on the created components."
                                skillIcon={
                                    <SkillsIcons logoComponent={
                                        <SiStorybook/>
