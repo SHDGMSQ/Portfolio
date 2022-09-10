@@ -10,7 +10,6 @@ import photo from '../../assets/photo/my_photo.jpg';
 
 export const AboutMe = () => {
 
-    //need to fix
 
     const myPhoto = {
         backgroundImage: `url(${photo})`
