@@ -9,7 +9,7 @@ import {AboutMeContact} from './aboutMeContact/AboutMeContact';
 import photo from '../../assets/photo/my_photo.jpg';
 
 export const AboutMe = () => {
-//need to fix
+
 
 
     const myPhoto = {
