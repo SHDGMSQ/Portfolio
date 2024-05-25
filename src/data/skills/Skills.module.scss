@@ -13,8 +13,9 @@
     .skills {
       width: 100%;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 18px;
       @media screen and (max-width: 625px) {
         justify-content: center;
       }

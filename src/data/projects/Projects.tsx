@@ -3,8 +3,8 @@ import {Project} from './project/Project';
 import style from './Projects.module.scss';
 import styleContainer from '../../common/styles/Container.module.css';
 import {Title} from '../../common/components/Title/Title';
-import socialIcon from '../../assets/images/projectImage/socialNetwork.jpg'
-import todoIcon from '../../assets/images/projectImage/todolist.jpg'
+import socialIcon from '../../assets/images/socialNetwork.jpg'
+import todoIcon from '../../assets/images/todolist.jpg'
 
 export const Projects = () => {
 
