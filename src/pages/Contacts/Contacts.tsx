@@ -11,7 +11,7 @@ import {GoMail} from 'react-icons/go';
 import {ContactsHeaderIcons} from '../../components/Icons/ContactsIcons/ContactsHeaderIcons/ContactsHeaderIcons';
 import {ContactsBodyIcons} from '../../components/Icons/ContactsIcons/ContactsBodyIcons/ContactsBodyIcons';
 import {Button} from '../../components/Button/Button';
-import photo from '../../assets/photo/main.jpg'
+import photo from '../../assets/photos/main.jpg'
 
 export const Contacts = () => {
 

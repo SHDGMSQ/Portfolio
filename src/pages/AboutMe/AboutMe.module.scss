@@ -3,7 +3,6 @@
 
 
 .aboutMe {
-  //min-height: 100vh;
   position: relative;
 
   .aboutMeContainer {
@@ -12,7 +11,6 @@
 
     .innerContainer {
       display: flex;
-      align-items: self-end;
       flex-wrap: wrap;
       width: 100%;
       @media screen and (max-width: 990px) {
@@ -20,21 +18,59 @@
         padding-bottom: 2rem
       }
 
-      .photo {
+      .photosContainer {
         max-width: 50%;
-        @include background;
-        opacity: 0.3;
         width: 50%;
-        height: 35rem;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
         @media screen and (max-width: 990px) {
           width: 100%;
           max-width: none;
+        }
+
+        .column {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          gap: 10px;
+        }
+
+        .photo {
+          width: 100%;
+          position: relative;
+          display: block;
+          overflow: hidden;
+          border-radius: 18px;
+          opacity: 0.4;
+          cursor: pointer;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 18px;
+          }
+
+          &:hover {
+            opacity: 1;
+            transform: scale(1.15);
+            transition: all 0.5s ease;
+            z-index: 10;
+          }
         }
       }
 
       .innerDescription {
         max-width: 50%;
         background: $bgColor;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
         @media screen and (max-width: 990px) {
           max-width: 100%;
           align-items: center;
@@ -43,12 +79,15 @@
         .title {
           @include text($titleFontFamily, 1.35rem ! important, 400, $textTitleColor);
           margin-bottom: 40px;
-          padding: 10px 30px;
-
-
+          padding: 0 30px;
           @media screen and (max-width: 990px) {
             display: flex;
             justify-content: center;
+          }
+
+          h4 {
+            margin: 0;
+            padding: 0;
           }
         }
 
@@ -59,6 +98,7 @@
           color: $textDescriptionColor;
           box-sizing: border-box;
           font-size: 1rem;
+          flex: 1;
           @media screen and (max-width: 990px) {
             display: flex;
             justify-content: center;

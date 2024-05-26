@@ -6,7 +6,7 @@ import {FaInstagram, FaWhatsapp} from "react-icons/fa";
 import {IoLogoLinkedin} from "react-icons/io";
 import {BsGithub} from "react-icons/bs";
 import {IndexIcons} from "../../components/Icons/IndexIcons/IndexIcons";
-import photo from "../../assets/photo/main.jpg";
+import photo from "../../assets/photos/main.jpg";
 
 
 export const Index = () => {
