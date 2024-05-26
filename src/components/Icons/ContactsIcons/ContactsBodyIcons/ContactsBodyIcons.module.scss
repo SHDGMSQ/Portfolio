@@ -1,0 +1,35 @@
+@import "../../../../styles/sass/variables";
+@import "../../../../styles/sass/mixins";
+
+.contactIcon {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 670px) {
+    margin-bottom: 10px;
+  }
+
+  .label {
+    background: $primaryColor;
+    border-radius: 50%;
+    height: 3rem;
+    flex: 0 0 3rem;
+    overflow: hidden;
+    text-align: center;
+    line-height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
+    position: relative;
+    @include centering;
+  }
+
+  .text {
+    color: $textTitleColor;
+    font-weight: 600;
+    letter-spacing: 0.015em;
+  }
+}
+
+
+
+
+

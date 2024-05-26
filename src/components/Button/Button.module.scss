@@ -1,0 +1,32 @@
+@import "../../styles/sass/variables";
+@import "../../styles/sass/mixins";
+
+.button {
+  width: 11rem;
+  height: 3rem;
+  background-color: $primaryColor;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+
+  @include text($titleFontFamily, 1rem, 500, $textTitleColor);
+  text-transform: uppercase;
+  border: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  .innerButton {
+    @include centering;
+
+    .buttonTitle {
+      margin-right: 0.3rem;
+    }
+  }
+}
+
+
+
+
+

@@ -1,0 +1,17 @@
+import React from 'react';
+import style from './Experience.module.scss';
+import styleContainer from '../../styles/Container.module.css';
+
+export const Experience = () => {
+
+    return (
+        <>
+            <div className={style.experience}>
+                <div className={`${styleContainer.container} ${style.experienceContainer}`}>
+                    </div>
+            </div>
+        </>
+    );
+};
+
+//types

@@ -1,0 +1,30 @@
+@import "../../../../styles/sass/variables";
+@import "../../../../styles/sass/mixins";
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1rem 1rem 0;
+  width: 200px;
+  height: 150px;
+  @media screen and (max-width: 670px) {
+    @include centering;
+    margin-bottom: 50px;
+  }
+
+  .innerLogo {
+    margin-bottom: 20px;
+    @media screen and (max-width: 670px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .innerTitle {
+    @include text($titleFontFamily, 1.125rem, 400 ,$textTitleColor);
+    margin-bottom: 10px;
+  }
+
+  .innerDescription {
+    @include text($descriptionFontFamily, 0.875rem, normal, $textDescriptionColor);
+  }
+}

@@ -1,0 +1,94 @@
+@import "../../styles/sass/variables";
+@import "../../styles/sass/mixins";
+
+.indexPage {
+  min-height: 100vh;
+  @include background;
+  position: relative;
+
+  &:before {
+    @include pseudo('', absolute, 0, 0, 0, 0, 0.75, $bgColor);
+  }
+
+  @media screen and (max-width: 940px) {
+    min-width: 940px;
+  }
+  @media screen and (max-width: 800px) {
+    min-width: 800px;
+  }
+  @media screen and (max-width: 660px) {
+    min-width: 660px;
+  }
+  @media screen and (max-width: 625px) {
+    min-width: 625px;
+    background-position: 75% 50%;
+  }
+  @media screen and (max-width: 500px) {
+    min-width: 500px;
+  }
+  @media screen and (max-width: 400px) {
+    min-width: 400px;
+  }
+
+  .indexContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 70%;
+    @media screen and (max-width: 625px) {
+      width: 100%;
+    }
+
+    .contacts {
+      margin-top: 20vh;
+      display: flex;
+    }
+
+    .text {
+      @include text($titleFontFamily, 45px, normal, $textTitleColor);
+      margin-top: 5vh;
+      @media screen and (max-width: 940px) {
+        font-size: 40px;
+      }
+      @media screen and (max-width: 800px) {
+        font-size: 35px;
+      }
+      @media screen and (max-width: 660px) {
+        font-size: 30px;
+      }
+      @media screen and (max-width: 625px) {
+        font-size: 25px;
+        margin-top: 20vh;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 20px;
+      }
+
+      h2 span {
+        display: block;
+      }
+
+      .description {
+        @include text($titleFontFamily, 35px, 400, $textTitleColor);
+        @media screen and (max-width: 800px) {
+          font-size: 30px;
+        }
+        @media screen and (max-width: 660px) {
+          font-size: 25px;
+        }
+        @media screen and (max-width: 625px) {
+          font-size: 20px;
+        }
+        @media screen and (max-width: 500px) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+@import "../../../styles/sass/variables";
+@import "../../../styles/sass/mixins";
+
+.project {
+  width: 250px;
+  background-color: $bgSecondColor;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  @media screen and (max-width: 628px) {
+    margin-bottom: 30px;
+  }
+
+  .imgContainer {
+    height: 200px;
+    width: 100%;
+    @include background;
+    @include centering;
+    position: relative;
+
+    &::before {
+      @include pseudo('', absolute, 0, 0, 0, 0, 0.4, black);
+    }
+  }
+
+  .projectName {
+    @include text($titleFontFamily, 1.2rem, 300, $textTitleColor);
+    line-height: 1.5em;
+    margin: 5% auto 0 auto;
+  }
+
+  .description {
+    margin-top: 5%;
+    margin-left: 10%;
+    @include text($descriptionFontFamily, 1em, normal, $textDescriptionColor);
+    @media screen and (max-width: 628px) {
+      margin: 0 auto;
+    }
+  }
+}

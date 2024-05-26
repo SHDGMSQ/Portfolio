@@ -1,0 +1,22 @@
+@import "../../styles/sass/variables";
+@import "../../styles/sass/mixins";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    color: $primaryColor;
+    .title {
+        font-size: 3rem;
+        color: $primaryColor;
+        margin-top: 10rem;
+        margin-bottom: 2rem;
+    }
+    .subtitle {
+        font-size: 2rem;
+    }
+}
+
+
+
