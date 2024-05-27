@@ -32,46 +32,53 @@
       position: relative;
       z-index: 1;
       margin-bottom: 80px;
+      padding: 0 10px;
       @include text($titleFontFamily, 1.65rem, 400, $textDescriptionColor);
-      @media screen and (max-width: 631px) {
+      @media screen and (max-width: 660px) {
         text-align: center;
+        font-size: 22px;
       }
     }
 
     button {
-      visibility: hidden;
-      opacity: 0;
+      //visibility: hidden;
+      //opacity: 0;
       position: absolute;
-      bottom: -100%;
-      transition: visibility 0s linear, opacity 0.5s linear, bottom 0.5s ease;
-    }
-
-    &:hover button {
-      visibility: visible;
-      opacity: 1;
-      animation: slideAndDrop 1s ease forwards;
+      //bottom: -100%;
+      bottom: 10px;
       svg {
         animation: snake 800ms infinite ease-out;
       }
+      //transition: visibility 0s linear, opacity 0.5s linear, bottom 0.5s ease;
+    }
+
+    &:hover button {
+      opacity: .7;
+      //visibility: visible;
+      //opacity: 1;
+      //animation: slideAndDrop 1s ease forwards;
+      //svg {
+      //  animation: snake 800ms infinite ease-out;
+      //}
     }
   }
 }
 
-@keyframes slideAndDrop {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(0);
-    opacity: 1;
-    bottom: 10px;
-  }
-  100% {
-    bottom: 0;
-    opacity: 1;
-  }
-}
+//@keyframes slideAndDrop {
+//  0% {
+//    transform: translateY(100%);
+//    opacity: 0;
+//  }
+//  50% {
+//    transform: translateY(0);
+//    opacity: 1;
+//    bottom: 10px;
+//  }
+//  100% {
+//    bottom: 0;
+//    opacity: 1;
+//  }
+//}
 
 @keyframes snake {
   0% {

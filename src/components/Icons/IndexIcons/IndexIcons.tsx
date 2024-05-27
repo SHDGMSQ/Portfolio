@@ -8,7 +8,7 @@ export const IndexIcons: React.FC<IndexIconsPropsType> = (
     
     return <>
         <a href={path} target={'_blank'} rel={'noreferrer nofollow noopener'}>
-        <IconContext.Provider value={{size: '1.2rem'}}>
+        <IconContext.Provider value={{size: '1.3rem'}}>
                 <div className={style.label}>
                     {logoComponent}
                 </div>

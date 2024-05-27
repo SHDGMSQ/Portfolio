@@ -6,16 +6,14 @@ import {FaInstagram, FaWhatsapp} from "react-icons/fa";
 import {IoLogoLinkedin} from "react-icons/io";
 import {BsGithub} from "react-icons/bs";
 import {IndexIcons} from "../../components/Icons/IndexIcons/IndexIcons";
-import photo from "../../assets/photos/main.jpg";
 
 
 export const Index = () => {
 
-  const mainPhoto = {backgroundImage: `url(${photo})`};
-
   return (
     <>
-      <div className={style.indexPage} id="main" style={mainPhoto}>
+      <div className={style.indexPage} id="main">
+        <img src="/Portfolio/assets/photos/main_2.jpg" alt="" />
         <div className={stylesContainer.container}>
           <div className={style.indexContainer}>
             <div className={style.contacts}>

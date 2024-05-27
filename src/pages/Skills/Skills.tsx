@@ -3,14 +3,16 @@ import style from "./Skills.module.scss";
 import styleContainer from "../../styles/Container.module.css";
 import {Skill} from "./skill/Skill";
 import {Title} from "../../components/Title/Title";
-import {FaGithub, FaReact, FaSass, FaAws} from "react-icons/fa";
-import {SiMaterialformkdocs, SiStyledcomponents, SiTypescript, SiWebpack } from "react-icons/si";
+import {FaAws, FaGithub, FaReact, FaSass} from "react-icons/fa";
+import {SiMaterialformkdocs, SiTypescript, SiWebpack} from "react-icons/si";
 import {TbApi} from "react-icons/tb";
 import {AiOutlineDeploymentUnit} from "react-icons/ai";
 import {SkillsIcons} from "../../components/Icons/SkillsIcons/SkillsIcons";
 
 
 export const Skills = () => {
+
+  //todo дописать описание навыков для restapi, aws, github, webpack
 
   return (
     <>

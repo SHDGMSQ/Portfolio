@@ -12,6 +12,8 @@ import {Hire} from "../pages/AboutMe/Hire/Hire";
 import {Footer} from "../components/Footer/Footer";
 import {AboutMe} from "../pages/AboutMe/AboutMe";
 import {Experience} from "../feautures/Experience/Experience";
+import {ModalProvider} from "../contexts/AppContext";
+import {Modal} from "../components/Modal/Modal";
 
 export enum PATH {
   HOME = "/",
@@ -46,7 +48,8 @@ export const App = () => {
   });
 
 
-  return <>
+  return <ModalProvider>
+    <Modal />
     <Header/>
     <div style={{position: "relative", overflow: "hidden", minHeight: "90vh"}}>
       {transitions((props, item) =>
@@ -69,7 +72,7 @@ export const App = () => {
         </animated.div>
       )}
     </div>
-  </>;
+  </ModalProvider>;
 };
 
 
