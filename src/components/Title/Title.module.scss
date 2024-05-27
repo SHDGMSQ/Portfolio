@@ -12,7 +12,11 @@
     line-height: 1.5em;
     text-transform: uppercase;
     letter-spacing: 0.015px;
-    margin: 0
+    margin: 0;
+
+    @media screen and (max-width: 512px) {
+      font-size: 1.5rem;
+    }
   }
 
   .textCenter {

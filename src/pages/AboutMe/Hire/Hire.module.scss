@@ -2,33 +2,86 @@
 @import "../../../styles/sass/mixins";
 
 .hireBlock {
-  min-height: 25vh;
-  margin: 90px 0 90px 0;
-  @media screen and (max-width: 990px) {
-    margin: 0 0 30px 0;
+  padding: 60px 0;
+
+  @media screen and (max-width: 1400px) {
+    padding: 30px 0;
   }
 
   .hireContainer {
     @include centering;
     flex-direction: column;
-    min-height: 200px;
     position: relative;
-    @include background;
-    background-image: url(https://i0.wp.com/demo.softhopper.studio/selfer/wp-content/uploads/sites/20/2018/10/bg-keyboard.jpg);
+    overflow: hidden;
 
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     &::before {
-      @include pseudo('', absolute, 0, 0, 0, 0, 0.92, $bgColor);
+      @include pseudo('', absolute, 0, 0, 0, 0, 0.8, $bgColor);
     }
 
     .description {
       position: relative;
       z-index: 1;
+      margin-bottom: 80px;
       @include text($titleFontFamily, 1.65rem, 400, $textDescriptionColor);
       @media screen and (max-width: 631px) {
         text-align: center;
       }
     }
+
+    button {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: -100%;
+      transition: visibility 0s linear, opacity 0.5s linear, bottom 0.5s ease;
+    }
+
+    &:hover button {
+      visibility: visible;
+      opacity: 1;
+      animation: slideAndDrop 1s ease forwards;
+      svg {
+        animation: snake 800ms infinite ease-out;
+      }
+    }
+  }
+}
+
+@keyframes slideAndDrop {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+    bottom: 10px;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes snake {
+  0% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px);
   }
 }
 

@@ -33,10 +33,9 @@ export const AboutMe = () => {
     {id: 6, src: "/Portfolio/assets/photos/6.jpg", pt: "100%"},
   ];
 
-  const text = "I am a positive and result oriented front-end developer with experience building landing pages and SPA, using React (JS, TS), Redux, HTML and CSS (SCSS). I speak English at an Intermediate level. In my free time I improve my skills and English. I would like to find a project work/full-time job in a creative company with up-to-date task and collaborative team!"
+  const text = "I've been developing for over 3 years. There is experience in developing projects, both from scratch, and experience in finalizing existing projects. Experience with both simple landings and complex architecture products."
 
-  const textArr = text.split(" ")
-
+  //const textArr = text.split(" ")
 
   return (
     <>
@@ -60,18 +59,19 @@ export const AboutMe = () => {
             <div className={style.innerDescription}>
               <div className={style.title}><h4>Hi There!</h4></div>
               <div className={style.description}>
-                {textArr.map((symbol, index) => (
-                  <React.Fragment key={index}>
-                    <span style={{
-                      animationDuration: "0.8s",
-                      animationDelay: `${0.01 * index}s`,
-                      animationTimingFunction: "cubic-bezier(0.11, 0, 0.5, 0)",
-                      animationFillMode: "forwards"
-                    }}>{symbol}{' '}
-                  </span>
-                    {index < textArr.length - 1 && <span key={`space-${index}`}> </span>}
-                  </React.Fragment>
-                ))}
+                {/*{textArr.map((symbol, index) => (*/}
+                {/*  <React.Fragment key={index}>*/}
+                {/*    <span style={{*/}
+                {/*      animationDuration: "0.8s",*/}
+                {/*      animationDelay: `${0.01 * index}s`,*/}
+                {/*      animationTimingFunction: "cubic-bezier(0.11, 0, 0.5, 0)",*/}
+                {/*      animationFillMode: "forwards"*/}
+                {/*    }}>{symbol}{' '}*/}
+                {/*  </span>*/}
+                {/*    {index < textArr.length - 1 && <span key={`space-${index}`}> </span>}*/}
+                {/*  </React.Fragment>*/}
+                {/*))}*/}
+                {text}
               </div>
               <div className={style.contactsContainer}>
                 <div className={style.contacts}>

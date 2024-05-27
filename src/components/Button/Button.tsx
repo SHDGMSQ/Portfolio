@@ -13,7 +13,7 @@ export const Button: React.FC<ButtonPropsType> = ({title, logo, styles, onClick}
     <button className={style.button} style={styles} onClick={onClickHandler}>
       <div className={style.innerButton}>
         <span className={style.buttonTitle}>{title}</span>
-        {<ButtonsIcons logoComponent={logo}/>}
+        <ButtonsIcons logoComponent={logo} />
       </div>
     </button>
   </>;

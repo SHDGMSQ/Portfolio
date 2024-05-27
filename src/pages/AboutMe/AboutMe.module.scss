@@ -13,9 +13,9 @@
       display: flex;
       flex-wrap: wrap;
       width: 100%;
-      @media screen and (max-width: 990px) {
+      @media screen and (max-width: 1400px) {
         align-items: center;
-        padding-bottom: 2rem
+        padding-bottom: 30px;
       }
 
       .photosContainer {
@@ -25,9 +25,18 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
-        @media screen and (max-width: 990px) {
+        @media screen and (max-width: 512px) {
+          grid-template-columns: repeat(2, 1fr);
+
+          >div:last-child {
+            display: none;
+          }
+        }
+
+        @media screen and (max-width: 1400px) {
           width: 100%;
-          max-width: none;
+          margin: 0 auto;
+          max-width: 900px;
         }
 
         .column {
@@ -71,18 +80,18 @@
         min-height: 100%;
         display: flex;
         flex-direction: column;
-        @media screen and (max-width: 990px) {
+        @media screen and (max-width: 1400px) {
           max-width: 100%;
           align-items: center;
         }
 
         .title {
           @include text($titleFontFamily, 1.35rem ! important, 400, $textTitleColor);
-          margin-bottom: 40px;
-          padding: 0 30px;
-          @media screen and (max-width: 990px) {
+          padding: 0 30px 40px;
+          @media screen and (max-width: 1400px) {
             display: flex;
             justify-content: center;
+            padding-top: 30px;
           }
 
           h4 {
@@ -93,17 +102,18 @@
 
         .description {
           line-height: 1.6875rem;
-          margin-bottom: 30px;
-          padding-left: 30px;
+          padding: 0 0 30px 30px;
           color: $textDescriptionColor;
           box-sizing: border-box;
           font-size: 1rem;
           flex: 1;
-          transform: scale(0.94);
-          animation: scale 1s forwards cubic-bezier(0.5, 1, 0.89, 1);
-          @media screen and (max-width: 990px) {
+          //transform: scale(0.94);
+          //animation: scale 1s forwards cubic-bezier(0.5, 1, 0.89, 1);
+          @media screen and (max-width: 1400px) {
             display: flex;
             justify-content: center;
+            padding: 0 0 30px 0;
+            text-align: center;
           }
 
           span {
@@ -117,10 +127,9 @@
         .contactsContainer {
           background: rgba(29, 33, 36, 0.3);
           padding: 30px;
-          margin-bottom: 30px;
           font-size: 1rem;
-          @media screen and (max-width: 990px) {
-            padding: 30px;
+          @media screen and (max-width: 1400px) {
+            width: 100%;
           }
 
           .contacts {
@@ -130,7 +139,7 @@
             @media screen and (max-width: 1023px) {
               height: 8rem;
             }
-            @media screen and (max-width: 990px) {
+            @media screen and (max-width: 1400px) {
               height: 7rem;
               justify-content: space-around;
             }
@@ -158,29 +167,44 @@
 
       .buttons {
         display: flex;
-        padding-left: 30px;
-        @media screen and (max-width: 990px) {
+        padding: 30px 0 0 30px;
+        @media screen and (max-width: 1400px) {
           justify-content: center;
+          padding: 30px 0 0;
         }
-        @media screen and (max-width: 460px) {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
+        a {
+          button {
+            svg {
+              animation: download 800ms infinite ease-out;
+            }
+          }
         }
       }
     }
   }
 }
 
-@keyframes scale {
+@keyframes download {
+  0% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
   100% {
-    transform: scale(1);
+    transform: translateY(-3px);
   }
 }
 
-@keyframes fade-in {
-  100% {
-    opacity: 1;
-    filter: blur(0);
-  }
-}
+//@keyframes scale {
+//  100% {
+//    transform: scale(1);
+//  }
+//}
+//
+//@keyframes fade-in {
+//  100% {
+//    opacity: 1;
+//    filter: blur(0);
+//  }
+//}
