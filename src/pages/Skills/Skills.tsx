@@ -42,14 +42,14 @@ export const Skills = () => {
                      }/>}
             />
             <Skill title={"Rest API"}
-                   description="Requests fetch, axios, JSON, XML, GET, POST, PUT, DELETE, request settings, async/await, promises."
+                   description="I have experience integrating client and server applications with RESTful API, including configuring GET, POST, PUT and DELETE requests, experience working with various data formats such as JSON and XML when exchanging data between systems."
                    skillIcon={
                      <SkillsIcons logoComponent={
                        <TbApi/>
                      }/>}
             />
             <Skill title={"Git/Github"}
-                   description="Сollaborative development experience, feature branch workflow principle, resolving conflicts."
+                   description="I have experience using branching and merging in Git, worked in a team using Git, synchronizing changes through remote repositories and resolving merge conflicts, worked with popular services such as GitHub, GitLab and Bitbucket for hosting and code collaboration."
                    skillIcon={
                      <SkillsIcons logoComponent={
                        <FaGithub/>
@@ -77,14 +77,14 @@ export const Skills = () => {
                      }/>}
             />*/}
             <Skill title={"Webpack"}
-                   description="Build and optimize the code in the application, configure."
+                   description="Used Webpack to optimize the build process, including minimization, transpilation and dependency management, used various loaders and plugins for processing and converting files, such as Babel for JavaScript, SASS for styles and file-loader for resources, implemented code separation to improve application performance, allowing code to be loaded on demand."
                    skillIcon={
                      <SkillsIcons logoComponent={
                        <SiWebpack/>
                      }/>}
             />
             <Skill title={"AWS S3"}
-                   description="Using AWS S3 for storage applications."
+                   description="I have experience in data management using Amazon S3, including uploading, extracting and deleting objects in scalable cloud storage, and have developed web applications using S3 as a storage for static files and media content."
                    skillIcon={
                      <SkillsIcons logoComponent={
                        <FaAws/>

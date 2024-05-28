@@ -7,7 +7,7 @@ input, textarea {
   outline: none;
   padding-left: 10px;
   height: 40px;
-  color: #828282;
+  color: rgb(224, 223, 223);
   background: rgba(255, 255, 255, 0.1);
   font-family: "Open Sans", sans-serif;
 }
@@ -17,14 +17,20 @@ input, textarea {
   @include background;
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   position: relative;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
 
   &::before {
     @include pseudo('', absolute, 0, 0, 0, 0, 0.8, $bgColor);
-  }
-
-  @media screen and (max-width: 670px) {
-    padding-bottom: 30px;
   }
 
   .contactsContainer {
@@ -36,7 +42,6 @@ input, textarea {
       z-index: 1;
       display: flex;
       width: 100%;
-      margin: 0 0 30px 0;
       padding: 0 6rem 0 0;
       @media screen and (max-width: 670px) {
         align-items: center;
@@ -50,11 +55,16 @@ input, textarea {
       @include text($titleFontFamily, 1.1rem, 500, $textTitleColor);
       position: relative;
       z-index: 1;
-      margin: 0 0 30px 0;
+      margin-bottom: 30px;
       display: flex;
       width: 100%;
       @media screen and (max-width: 670px) {
         justify-content: center;
+        margin-bottom: 0;
+      }
+
+      @media screen and (max-width: 350px) {
+        font-size: 14px;
       }
     }
 
@@ -64,12 +74,25 @@ input, textarea {
       display: flex;
       justify-content: space-between;
       width: 100%;
-      margin: 0 0 30px 0;
+      margin-bottom: 30px;
+
       @media screen and (max-width: 670px) {
-        display: block;
+        display: flex;
+        flex-direction: column;
         margin-left: auto;
         margin-right: auto;
         width: 6em;
+        margin-bottom: 0;
+        gap: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
       }
     }
 
@@ -86,20 +109,17 @@ input, textarea {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        @media screen and (max-width: 456px) {
+        gap: 60px;
+        @media screen and (max-width: 670px) {
           flex-direction: column;
+          gap: 0;
         }
 
         .name {
           display: flex;
           flex-direction: column;
-          flex: 0 0 50%;
-          padding: 15px;
-          margin-left: -15px;
+          width: 100%;
           box-sizing: border-box;
-          @media screen and (max-width: 456px) {
-            margin-right: -15px;
-          }
 
           span {
             color: $textTitleColor;
@@ -117,12 +137,7 @@ input, textarea {
         .email {
           display: flex;
           flex-direction: column;
-          flex: 0 0 50%;
-          padding: 15px;
-          margin-right: -15px;
-          @media screen and (max-width: 456px) {
-            margin-left: -15px;
-          }
+          width: 100%;
 
           span {
             color: $textTitleColor;
@@ -254,7 +269,6 @@ input, textarea {
     transform: translateY(-3px);
   }
 }
-
 
 
 

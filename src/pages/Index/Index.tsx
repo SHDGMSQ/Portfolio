@@ -13,7 +13,7 @@ export const Index = () => {
   return (
     <>
       <div className={style.indexPage} id="main">
-        <img src="/Portfolio/assets/photos/main_2.jpg" alt="" />
+        <img src="/Portfolio/assets/photos/main.jpg" alt="" />
         <div className={stylesContainer.container}>
           <div className={style.indexContainer}>
             <div className={style.contacts}>

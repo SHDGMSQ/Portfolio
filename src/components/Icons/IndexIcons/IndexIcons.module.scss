@@ -2,14 +2,21 @@
 
 
 .label {
-    color: #343a40 !important;
-    background-color:  rgba(255,255,255,.8);
-    border-radius: 50%;
-    margin-right: 1rem;
-    @include centering;
-    height: 2.5rem;
-    width: 2.5rem;
-    &:hover {
-        cursor: pointer;
-    }
+  color: #343a40 !important;
+  background-color: rgba(255, 255, 255, .8);
+  border-radius: 50%;
+  margin-right: 1rem;
+  @include centering;
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+
+  @media screen and (max-width: 500px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
 }

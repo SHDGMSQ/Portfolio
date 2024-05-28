@@ -36,6 +36,8 @@ const errorModalContent =
     <Links/>
   </div>;
 
+const rel = "noreferrer nofollow noopener";
+
 export const Contacts = () => {
 
   const {showLoader, hideLoader} = useContext(LoaderContext);
@@ -115,18 +117,26 @@ export const Contacts = () => {
             <h2>Let's Connect</h2>
           </div>
           <div className={style.contactIcons}>
-            <ContactsBodyIcons
-              title="Telegram" logoComponent={<TbBrandTelegram/>}
-            />
-            <ContactsBodyIcons
-              title="Instagram" logoComponent={<FaInstagram/>}
-            />
-            <ContactsBodyIcons
-              title="LinkedIn" logoComponent={<IoLogoLinkedin/>}
-            />
-            <ContactsBodyIcons
-              title="Skype" logoComponent={<FaSkype/>}
-            />
+            <a href={"https://t.me/dmitry_shg"} target={"_blank"} rel={rel}>
+              <ContactsBodyIcons
+                title="Telegram" logoComponent={<TbBrandTelegram/>}
+              />
+            </a>
+            <a href={"https://www.instagram.com/dmitry_shavlukevich/"} target={"_blank"} rel={rel}>
+              <ContactsBodyIcons
+                title="Instagram" logoComponent={<FaInstagram/>}
+              />
+            </a>
+            <a href={"https://www.linkedin.com/in/dmitry-shavlukevich-1a5572228/"} target={"_blank"} rel={rel}>
+              <ContactsBodyIcons
+                title="LinkedIn" logoComponent={<IoLogoLinkedin/>}
+              />
+            </a>
+            <a href={"https://join.skype.com/invite/JipTwlMEQLa1"} target={"_blank"} rel={rel}>
+              <ContactsBodyIcons
+                title="Skype" logoComponent={<FaSkype/>}
+              />
+            </a>
           </div>
           <div className={style.title} style={{marginBottom: 0}}>
             <h2>Send me a message</h2>

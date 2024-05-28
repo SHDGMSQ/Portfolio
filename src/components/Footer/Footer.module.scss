@@ -5,17 +5,23 @@
   min-height: 10vh;
   background-color: $bgColor;
   @include centering;
+  padding-bottom: 20px;
 
   .footerContainer {
     justify-content: flex-start;
     flex-direction: column;
     width: 100%;
+    padding: 10px;
 
     .title {
       @include text($titleFontFamily, 1.875rem, 500, $textTitleColor);
       line-height: 1.5em;
       letter-spacing: 0.015px;
-      margin: 0
+      margin: 0;
+
+      @media screen and (max-width: 350px) {
+        font-size: 24px;
+      }
     }
 
     .copyright {
