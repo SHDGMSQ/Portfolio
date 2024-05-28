@@ -12,8 +12,9 @@ import {Hire} from "../pages/AboutMe/Hire/Hire";
 import {Footer} from "../components/Footer/Footer";
 import {AboutMe} from "../pages/AboutMe/AboutMe";
 import {Experience} from "../feautures/Experience/Experience";
-import {ModalProvider} from "../contexts/AppContext";
+import {LoaderProvider, ModalProvider} from "../contexts/AppContext";
 import {Modal} from "../components/Modal/Modal";
+import {Loader} from "../components/Loader/Loader";
 
 export enum PATH {
   HOME = "/",
@@ -49,29 +50,32 @@ export const App = () => {
 
 
   return <ModalProvider>
-    <Modal />
-    <Header/>
-    <div style={{position: "relative", overflow: "hidden", minHeight: "90vh"}}>
-      {transitions((props, item) =>
-        <animated.div className="App" style={props}>
-          <Routes location={item}>
-            <Route path={PATH.HOME} element={<Navigate to={PATH.INDEX}/>}/>
-            <Route path={PATH.INDEX} element={<Index/>}/>
-            <Route path={PATH.SKILLS} element={<Skills/>}/>
-            <Route path={PATH.PROJECTS} element={<Projects/>}/>
-            <Route path={PATH.CONTACTS} element={<Contacts/>}/>
-            <Route path={PATH.PAGE_NOT_FOUND} element={<NotFound/>}/>
-          </Routes>
-          <Skills/>
-          <AboutMe/>
-          <Hire/>
-          {/*<Experience/>*/}
-          <Projects/>
-          <Contacts/>
-          <Footer/>
-        </animated.div>
-      )}
-    </div>
+    <LoaderProvider>
+      <Modal />
+      <Loader />
+      <Header/>
+      <div style={{position: "relative", overflow: "hidden", minHeight: "90vh"}}>
+        {transitions((props, item) =>
+          <animated.div className="App" style={props}>
+            <Routes location={item}>
+              <Route path={PATH.HOME} element={<Navigate to={PATH.INDEX}/>}/>
+              <Route path={PATH.INDEX} element={<Index/>}/>
+              <Route path={PATH.SKILLS} element={<Skills/>}/>
+              <Route path={PATH.PROJECTS} element={<Projects/>}/>
+              <Route path={PATH.CONTACTS} element={<Contacts/>}/>
+              <Route path={PATH.PAGE_NOT_FOUND} element={<NotFound/>}/>
+            </Routes>
+            <Skills/>
+            <AboutMe/>
+            <Hire/>
+            {/*<Experience/>*/}
+            <Projects/>
+            <Contacts/>
+            <Footer/>
+          </animated.div>
+        )}
+      </div>
+    </LoaderProvider>
   </ModalProvider>;
 };
 

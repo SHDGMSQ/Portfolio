@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext, useState} from "react";
 import style from "./Contacts.module.scss";
 import styleContainer from "../../styles/Container.module.css";
 import {Title} from "../../components/Title/Title";
@@ -11,10 +11,83 @@ import {GoMail} from "react-icons/go";
 import {ContactsHeaderIcons} from "../../components/Icons/ContactsIcons/ContactsHeaderIcons/ContactsHeaderIcons";
 import {ContactsBodyIcons} from "../../components/Icons/ContactsIcons/ContactsBodyIcons/ContactsBodyIcons";
 import {Button} from "../../components/Button/Button";
+import emailjs from "emailjs-com";
+import {LoaderContext, ModalContext} from "../../contexts/AppContext";
+import {Links} from "../../components/Modal/Links/Links";
+import successIcon from "../../assets/images/success.png";
+import errorIcon from "../../assets/images/error.png";
+import {TfiEmail} from "react-icons/tfi";
+
+const modalContent =
+  <div className={style.inner}>
+    <h3>Thank you!</h3>
+    <img className={style.successImage} alt="" src={successIcon}/>
+    <p>Email has been sent.</p>
+    <p>I will review your message and inform you of my decision later.</p>
+  </div>;
+
+const errorModalContent =
+  <div className={style.inner}>
+    <h3>Something went wrong!</h3>
+    <img className={style.errorImage} alt="" src={errorIcon}/>
+    <p>Email has not been sent!</p>
+    <p>Please select an alternative method of communication by clicking on the icon that will be most convenient for you
+      to contact me.</p>
+    <Links/>
+  </div>;
 
 export const Contacts = () => {
 
-  //const contactsPhoto = {backgroundImage:`url(${photo})`}
+  const {showLoader, hideLoader} = useContext(LoaderContext);
+  const {openModal} = useContext(ModalContext);
+
+  const [name, setName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [subject, setSubject] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [nameValid, setNameValid] = useState<boolean>(true);
+  const [emailValid, setEmailValid] = useState<boolean>(true);
+  const [messageValid, setMessageValid] = useState<boolean>(true);
+
+  const sendEmail = () => {
+
+    if (!name || !email || !message) {
+      setNameValid(!!name);
+      setEmailValid(!!email);
+      setMessageValid(!!message);
+      return;
+    }
+    const templateParams = {
+      name,
+      email,
+      subject,
+      message
+    };
+
+    showLoader();
+
+    try {
+      emailjs.send(process.env.REACT_APP_MAIL_SERVICE_ID || "", process.env.REACT_APP_MAIL_TEMPLATE_ID || "", templateParams, process.env.REACT_APP_MAIL_USER_ID || "")
+        .then((response) => {
+          if (response.status === 200) {
+            openModal(modalContent);
+          } else {
+            openModal(errorModalContent);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+          openModal(errorModalContent);
+        })
+        .finally(() => {
+          hideLoader();
+        });
+    } catch (err) {
+      console.log(err);
+      openModal(errorModalContent);
+      hideLoader();
+    }
+  };
 
   return (
     <>
@@ -55,41 +128,52 @@ export const Contacts = () => {
               title="Skype" logoComponent={<FaSkype/>}
             />
           </div>
-          <div className={style.title}>
+          <div className={style.title} style={{marginBottom: 0}}>
             <h2>Send me a message</h2>
           </div>
           <form className={style.formContainer}>
             <div className={style.nameEmail}>
-              <div className={style.name}>
+              <div className={`${style.name} ${!nameValid ? style.notValid : ""}`}>
                 <span>Name *</span>
-                <input/>
+                <input
+                  value={name}
+                  onChange={e => setName(e.currentTarget.value)}
+                  onFocus={() => setNameValid(true)}
+                />
+                <p style={{visibility: `${!nameValid ? "visible" : "hidden"}`}}>Name is required!</p>
               </div>
-              <div className={style.email}>
+              <div className={`${style.email} ${!emailValid ? style.notValid : ""}`}>
                 <span>Email *</span>
-                <input/>
+                <input
+                  value={email}
+                  onChange={(e) => setEmail(e.currentTarget.value)}
+                  onFocus={() => setEmailValid(true)}
+                />
+                <p style={{visibility: `${!emailValid ? "visible" : "hidden"}`}}>Email is required!</p>
               </div>
             </div>
             <div className={style.subject}>
-              <span>Subject *</span>
-              <input/>
+              <span>Subject</span>
+              <input
+                value={subject}
+                onChange={(e) => setSubject(e.currentTarget.value)}
+              />
             </div>
-            <div className={style.message}>
+            <div className={`${style.message} ${!messageValid ? style.notValid : ""}`}>
               <span>Message *</span>
-              <textarea/>
+              <textarea
+                value={message}
+                onChange={(e) => setMessage(e.currentTarget.value)}
+                onFocus={() => setMessageValid(true)}
+              />
+              <p style={{visibility: `${!messageValid ? "visible" : "hidden"}`}}>Message is required!</p>
             </div>
           </form>
           <div className={style.buttonContainer}>
             <Button
               title={"Send a message"}
-              onClick={() => {
-              }}
-              styles={
-                {
-                  borderRadius: "2rem",
-                  width: "15rem",
-                  height: "4rem"
-                }
-              }
+              onClick={sendEmail}
+              logo={<TfiEmail/>}
             />
           </div>
         </div>
