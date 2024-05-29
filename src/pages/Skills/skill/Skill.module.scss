@@ -29,6 +29,7 @@
     position: relative;
     height: 130px;
     cursor: inherit;
+    will-change: transform;
 
     &:after {
       content: "";
@@ -37,7 +38,7 @@
       bottom: 0;
       right: 0;
       left: 0;
-      height: 2em;
+      height: 32px;
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $bgSecondColor 100%);
       pointer-events: none;
     }
