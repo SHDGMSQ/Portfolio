@@ -1,52 +1,58 @@
-import React from 'react';
+import React from "react";
 import style from './Nav.module.scss';
-import {Link} from "react-scroll";
+import { Link } from 'react-scroll';
 
 export const Nav = () => {
+
     return (
         <div className={style.nav}>
             <Link activeClass={style.activeLink}
-                  to="main"
-                  spy={true}
-                  smooth={true}
+                  to="index"
+                  spy
+                  smooth
                   offset={-30}
                   duration={500}
+                  onSetActive={() => {window.location.hash = "#/index"}}
             >
                 Main
             </Link>
             <Link activeClass={style.activeLink}
                   to="skills"
-                  spy={true}
-                  smooth={true}
+                  spy
+                  smooth
                   offset={-30}
                   duration={500}
+                  onSetActive={() => {window.location.hash = "#/skills"}}
             >
                 Skills
             </Link>
-            <Link activeClass={style.activeLink}
+            <Link activeClass={ style.activeLink}
                   to="aboutMe"
-                  spy={true}
-                  smooth={true}
+                  spy
+                  smooth
                   offset={-30}
                   duration={500}
+                  onSetActive={() => {window.location.hash = "#/aboutMe"}}
             >
                 About Me
             </Link>
             <Link activeClass={style.activeLink}
                   to="projects"
-                  spy={true}
-                  smooth={true}
+                  spy
+                  smooth
                   offset={-30}
                   duration={500}
+                  onSetActive={() => {window.location.hash = "#/projects"}}
             >
                 Projects
             </Link>
             <Link activeClass={style.activeLink}
                   to="contacts"
-                  spy={true}
-                  smooth={true}
+                  spy
+                  smooth
                   offset={-30}
                   duration={500}
+                  onSetActive={() => {window.location.hash = "#/contacts"}}
             >
                 Contacts
             </Link>

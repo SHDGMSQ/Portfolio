@@ -9,10 +9,9 @@ import {IndexIcons} from "../../components/Icons/IndexIcons/IndexIcons";
 
 
 export const Index = () => {
-
   return (
     <>
-      <div className={style.indexPage} id="main">
+      <div className={style.indexPage} id="index">
         <img src="/Portfolio/assets/photos/main.jpg" alt="" />
         <div className={stylesContainer.container}>
           <div className={style.indexContainer}>
