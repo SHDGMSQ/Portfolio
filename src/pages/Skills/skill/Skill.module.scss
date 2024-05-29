@@ -29,7 +29,6 @@
     position: relative;
     height: 130px;
     cursor: inherit;
-    will-change: transform;
 
     &:after {
       content: "";
@@ -38,11 +37,10 @@
       bottom: 0;
       right: 0;
       left: 0;
-      height: 50px;
+      height: 40px;
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0), $bgSecondColor 100%);
-      -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, $bgSecondColor 100%);
       pointer-events: none;
-      will-change: transform;
+      z-index: 1;
     }
     &.hideGradient:after {
       display: none;
