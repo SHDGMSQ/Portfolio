@@ -12,8 +12,6 @@ import {SkillsIcons} from "../../components/Icons/SkillsIcons/SkillsIcons";
 
 export const Skills = () => {
 
-  //todo дописать описание навыков для restapi, aws, github, webpack
-
   return (
     <>
       <div className={style.skillsBlock} id="skills">

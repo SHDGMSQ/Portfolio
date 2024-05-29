@@ -19,7 +19,7 @@ export const Hire = () => {
 
   const {openModal} = useContext(ModalContext);
 
-  //todo протестировать видна ли граница картинки в блоке на мобайле
+  //todo не виден лоадер, переделать! кнопка download нужно шрифт уменьшить чтобы влазил и текст и иконка, центрирование letsconnect кнопок, бургер меню, якоря для страниц, страница проектов, мб анимация скроллинга
 
   const clickHireHandler = () => {
     openModal(modalContent);
