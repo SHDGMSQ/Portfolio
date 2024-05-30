@@ -4,9 +4,6 @@
 .contactIcon {
   display: flex;
   align-items: center;
-  @media screen and (max-width: 670px) {
-    margin-bottom: 10px;
-  }
 
   .label {
     background: $primaryColor;
@@ -26,6 +23,20 @@
     color: $textTitleColor;
     font-weight: 600;
     letter-spacing: 0.015em;
+  }
+}
+
+@media screen and (max-width: 670px){
+  .contactIcon {
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    .label {
+      margin: 0;
+    }
+    .text {
+      padding-top: 5px;
+    }
   }
 }
 
