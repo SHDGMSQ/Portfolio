@@ -12,11 +12,12 @@ import {ContactsHeaderIcons} from "../../components/Icons/ContactsIcons/Contacts
 import {ContactsBodyIcons} from "../../components/Icons/ContactsIcons/ContactsBodyIcons/ContactsBodyIcons";
 import {Button} from "../../components/Button/Button";
 import emailjs from "emailjs-com";
-import {LoaderContext, ModalContext} from "../../contexts/AppContext";
 import {Links} from "../../components/Modal/Links/Links";
 import successIcon from "../../assets/images/success.png";
 import errorIcon from "../../assets/images/error.png";
 import {TfiEmail} from "react-icons/tfi";
+import {ModalContext} from "../../contexts/ModalContext";
+import {LoaderContext} from "../../contexts/LoaderContext";
 
 const modalContent =
   <div className={style.inner}>

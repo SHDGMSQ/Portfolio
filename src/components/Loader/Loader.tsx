@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import style from "./Loader.module.scss"
-import {LoaderContext} from "../../contexts/AppContext";
+import {LoaderContext} from "../../contexts/LoaderContext";
 
 export const Loader = () => {
 

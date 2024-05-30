@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useId} from "react";
 import style from "./Index.module.scss";
 import stylesContainer from "../../styles/Container.module.css";
 import {TbBrandTelegram} from "react-icons/tb";
@@ -6,12 +6,19 @@ import {FaInstagram, FaWhatsapp} from "react-icons/fa";
 import {IoLogoLinkedin} from "react-icons/io";
 import {BsGithub} from "react-icons/bs";
 import {IndexIcons} from "../../components/Icons/IndexIcons/IndexIcons";
+import {ImageComponent} from "../../components/ImageComponent/ImageComponent";
 
 
 export const Index = () => {
+
+  //todo регистрировать картинку и ждать её загрузку
+
+  const id = useId();
+
   return (
     <>
       <div className={style.indexPage} id="index">
+        {/*<ImageComponent src="/Portfolio/assets/photos/main.jpg" id={id} />*/}
         <img src="/Portfolio/assets/photos/main.jpg" alt="" />
         <div className={stylesContainer.container}>
           <div className={style.indexContainer}>

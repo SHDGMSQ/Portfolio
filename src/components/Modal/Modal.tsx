@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
-import {ModalContext} from "../../contexts/AppContext";
 import style from "./Modal.module.scss";
 import {IoCloseCircleOutline} from "react-icons/io5";
+import {ModalContext} from "../../contexts/ModalContext";
 
 export const Modal: React.FC = () => {
   const {isModalOpen, modalContent, closeModal} = useContext(ModalContext);

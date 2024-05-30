@@ -200,6 +200,10 @@ input, textarea {
         height: 48px;
         width: 254px;
 
+        @media screen and (max-width: 400px){
+          width: 100%;
+        }
+
         span {
           margin-right: 10px;
         }
