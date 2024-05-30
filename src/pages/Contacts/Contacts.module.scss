@@ -120,6 +120,9 @@ input, textarea {
           flex-direction: column;
           width: 100%;
           box-sizing: border-box;
+          @media screen and (max-width: 670px) {
+            padding-bottom: 15px;
+          }
 
           span {
             color: $textTitleColor;
@@ -155,7 +158,7 @@ input, textarea {
       .subject {
         display: flex;
         flex-direction: column;
-        padding: 15px 0 15px 0;
+        padding: 15px 0;
 
         span {
           color: $textTitleColor;
@@ -166,7 +169,7 @@ input, textarea {
       .message {
         display: flex;
         flex-direction: column;
-        padding: 15px 0 15px 0;
+        padding: 15px 0;
 
         span {
           color: $textTitleColor;

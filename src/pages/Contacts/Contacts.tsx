@@ -53,12 +53,12 @@ export const Contacts = () => {
 
   const sendEmail = () => {
 
-    // if (!name || !email || !message) {
-    //   setNameValid(!!name);
-    //   setEmailValid(!!email);
-    //   setMessageValid(!!message);
-    //   return;
-    // }
+    if (!name || !email || !message) {
+      setNameValid(!!name);
+      setEmailValid(!!email);
+      setMessageValid(!!message);
+      return;
+    }
     const templateParams = {
       name,
       email,
@@ -66,35 +66,29 @@ export const Contacts = () => {
       message
     };
 
-    //todo вернуть отправку на почту
-
     showLoader();
 
-    // setTimeout(() => {
-    //   hideLoader();
-    // }, 3_000)
-
-    // try {
-    //   emailjs.send(process.env.REACT_APP_MAIL_SERVICE_ID || "", process.env.REACT_APP_MAIL_TEMPLATE_ID || "", templateParams, process.env.REACT_APP_MAIL_USER_ID || "")
-    //     .then((response) => {
-    //       if (response.status === 200) {
-    //         openModal(modalContent);
-    //       } else {
-    //         openModal(errorModalContent);
-    //       }
-    //     })
-    //     .catch((err) => {
-    //       console.log(err);
-    //       openModal(errorModalContent);
-    //     })
-    //     .finally(() => {
-    //       hideLoader();
-    //     });
-    // } catch (err) {
-    //   console.log(err);
-    //   openModal(errorModalContent);
-    //   hideLoader();
-    // }
+    try {
+      emailjs.send(process.env.REACT_APP_MAIL_SERVICE_ID || "", process.env.REACT_APP_MAIL_TEMPLATE_ID || "", templateParams, process.env.REACT_APP_MAIL_USER_ID || "")
+        .then((response) => {
+          if (response.status === 200) {
+            openModal(modalContent);
+          } else {
+            openModal(errorModalContent);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+          openModal(errorModalContent);
+        })
+        .finally(() => {
+          hideLoader();
+        });
+    } catch (err) {
+      console.log(err);
+      openModal(errorModalContent);
+      hideLoader();
+    }
   };
 
   return (
