@@ -70,9 +70,9 @@ export const Contacts = () => {
 
     showLoader();
 
-    setTimeout(() => {
-      hideLoader();
-    }, 3_000)
+    // setTimeout(() => {
+    //   hideLoader();
+    // }, 3_000)
 
     // try {
     //   emailjs.send(process.env.REACT_APP_MAIL_SERVICE_ID || "", process.env.REACT_APP_MAIL_TEMPLATE_ID || "", templateParams, process.env.REACT_APP_MAIL_USER_ID || "")
