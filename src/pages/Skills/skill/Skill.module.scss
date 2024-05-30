@@ -22,7 +22,7 @@
   }
 
   .description {
-    @include text($descriptionFontFamily, 1em, normal, $textDescriptionColor);
+    @include text($descriptionFontFamily, 16px, normal, $textDescriptionColor);
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
