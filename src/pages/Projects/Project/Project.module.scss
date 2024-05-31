@@ -17,10 +17,10 @@
     @include centering;
     position: relative;
 
-    &::before {
-      @include pseudo('', absolute, 0, 0, 0, 0, 0.3, black);
-      z-index: 1;
-    }
+    //&::before {
+    //  @include pseudo('', absolute, 0, 0, 0, 0, 0.3, black);
+    //  z-index: 1;
+    //}
 
     .linksContainer {
       visibility: hidden;
