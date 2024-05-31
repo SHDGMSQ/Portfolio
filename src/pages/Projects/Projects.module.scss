@@ -2,7 +2,6 @@
 @import "../../styles/sass/mixins";
 
 .projectsBlock {
-  //min-height: 100vh;
   background-color: rgba(29, 33, 36, 0.3);
   padding-bottom: 30px;
 
@@ -15,9 +14,9 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      gap: 20px;
       @media screen and (max-width: 628px) {
-          display: block;
-          text-align: -webkit-center;
+        justify-content: center;
       }
     }
   }

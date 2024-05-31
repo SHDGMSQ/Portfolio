@@ -2,14 +2,13 @@
 @import "../../../styles/sass/mixins";
 
 .project {
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   background-color: $bgSecondColor;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  @media screen and (max-width: 628px) {
-    margin-bottom: 30px;
-  }
+  padding-bottom: 20px;
 
   .imgContainer {
     height: 200px;
@@ -19,22 +18,115 @@
     position: relative;
 
     &::before {
-      @include pseudo('', absolute, 0, 0, 0, 0, 0.4, black);
+      @include pseudo('', absolute, 0, 0, 0, 0, 0.3, black);
+      z-index: 1;
     }
+
+    .linksContainer {
+      visibility: hidden;
+      position: absolute;
+      opacity: 0;
+      bottom: -100%;
+      width: 100%;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      .linksContainer {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        animation: slideAndDrop 1s ease forwards;
+        z-index: 1;
+
+        a {
+          width: 100%;
+          button {
+            width: 100%;
+            opacity: 1;
+
+            svg {
+              width: 20px;
+              height: 20px;
+              padding-left: 5px;
+              animation: snake 800ms infinite ease-out;
+            }
+          }
+        }
+        .code {
+          button {
+            background-color: black;
+          }
+        }
+      }
+    }
+
+
   }
 
-  .projectName {
-    @include text($titleFontFamily, 1.2rem, 300, $textTitleColor);
+  .title {
+    @include text($titleFontFamily, 24px, 500, $textTitleColor);
     line-height: 1.5em;
-    margin: 5% auto 0 auto;
+    padding-top: 15px;
+    margin: 0 auto;
   }
 
   .description {
-    margin-top: 5%;
-    margin-left: 10%;
-    @include text($descriptionFontFamily, 1em, normal, $textDescriptionColor);
-    @media screen and (max-width: 628px) {
-      margin: 0 auto;
+    padding: 0 20px;
+    @include text($descriptionFontFamily, 16px, normal, $textDescriptionColor);
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+    height: 130px;
+    cursor: inherit;
+    mask-image: linear-gradient(to bottom, $bgSecondColor 60%, transparent 100%);
+
+    &::-webkit-scrollbar {
+      display: none;
     }
+    &.hideGradient {
+      mask-image: linear-gradient(to bottom, $bgSecondColor 100%, transparent 100%);
+    }
+  }
+}
+
+@keyframes snake {
+  0% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes slideAndDrop {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+    bottom: 10px;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
   }
 }

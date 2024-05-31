@@ -19,8 +19,8 @@ export const Hire = () => {
   const {openModal} = useContext(ModalContext);
 
   //todo
-  // 1) отображать лоадер пока все картинки не подгрузятся
-  // 5) страница проектов,
+  // 2) валидация email
+  // 1) отображать лоадер пока все картинки не подгрузятся - выпилить!
 
   const clickHireHandler = () => {
     openModal(modalContent);

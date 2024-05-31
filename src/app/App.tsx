@@ -15,7 +15,6 @@ import {Loader} from "../components/Loader/Loader";
 import {Element} from "react-scroll";
 import {ModalProvider} from "../contexts/ModalContext";
 import {LoaderProvider} from "../contexts/LoaderContext";
-import {ImagesProvider, useImageLoad} from "../contexts/ImagesContext";
 
 export const App = () => {
 
@@ -28,9 +27,6 @@ export const App = () => {
     config: {duration: 500}
 
   });
-
-  const {allImagesLoaded} = useImageLoad();
-
 
   useEffect(() => {
 
@@ -59,41 +55,33 @@ export const App = () => {
     return <NotFound/>;
   }
 
-  //todo если не загружены все картинки показываем лоадер
-
-  // if (!allImagesLoaded) {
-  //   return <Loader />
-  // }
-
   return (
     <ModalProvider>
       <LoaderProvider>
-        <ImagesProvider>
-          <Modal/>
-          <Loader/>
-          <Header/>
-          <div style={{position: "relative", overflow: "hidden", minHeight: "90vh"}}>
-            <animated.div className="App" style={animationStylesContent}>
-              <Element name="index">
-                <Index/>
-              </Element>
-              <Element name="skills">
-                <Skills/>
-              </Element>
-              <Element name={"aboutMe"}>
-                <AboutMe/>
-                <Hire/>
-              </Element>
-              <Element name="projects">
-                <Projects/>
-              </Element>
-              <Element name="contacts">
-                <Contacts/>
-              </Element>
-              <Footer/>
-            </animated.div>
-          </div>
-        </ImagesProvider>
+        <Modal/>
+        <Loader/>
+        <Header/>
+        <div style={{position: "relative", overflow: "hidden", minHeight: "90vh"}}>
+          <animated.div className="App" style={animationStylesContent}>
+            <Element name="index">
+              <Index/>
+            </Element>
+            <Element name="skills">
+              <Skills/>
+            </Element>
+            <Element name={"aboutMe"}>
+              <AboutMe/>
+              <Hire/>
+            </Element>
+            <Element name="projects">
+              <Projects/>
+            </Element>
+            <Element name="contacts">
+              <Contacts/>
+            </Element>
+            <Footer/>
+          </animated.div>
+        </div>
       </LoaderProvider>
     </ModalProvider>
   );
