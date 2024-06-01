@@ -2,12 +2,53 @@
 @import "../../styles/sass/mixins";
 
 .experience {
-  min-height: 50vh;
   position: relative;
+  padding-bottom: 30px;
 
   .experienceContainer {
     justify-content: flex-start;
     flex-direction: column;
+
+    .inner {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      @media screen and (max-width: 767px) {
+        justify-content: center;
+      }
+
+      .experienceBlock {
+        background-color: #12141c;
+        padding: 20px;
+        box-sizing: border-box;
+        color: #f26c4f;
+        font-size: 70px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 250px;
+        width: 100%;
+        border-radius: 30px;
+
+        .number {
+          margin: 0 ;
+          padding: 0;
+          text-shadow: rgba(242, 108, 79, .3) 2px 4px;
+        }
+
+        .subTitle {
+          color: $textTitleColor;
+          font-weight: 500;
+          font-size: 24px;
+          text-align: center;
+        }
+      }
+
+    }
   }
 }
 

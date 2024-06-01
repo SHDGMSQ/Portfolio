@@ -22,6 +22,9 @@ const LazyContactsPage = lazy(() => import("../pages/Contacts/Contacts")
 const LazyAboutMePage = lazy(() => import("../pages/AboutMe/AboutMe")
   .then((module) => ({default: module.AboutMe})));
 
+const LazyExperiencePage = lazy(() => import("../feautures/Experience/Experience")
+  .then((module) => ({default: module.Experience})));
+
 export const App = () => {
 
   const {showLoader, hideLoader} = useContext(LoaderContext);
@@ -42,7 +45,7 @@ export const App = () => {
     setIsVisible(true);
 
     const checkPath = () => {
-      const validPath = ["#/index", "#/skills", "#/aboutMe", "#/projects", "#/contacts"];
+      const validPath = ["#/index", "#/skills", "#/aboutMe", "#/experience", "#/projects", "#/contacts"];
       const path = window.location.hash;
       if (!validPath.includes(path)) {
         setIsNotFound(true);
@@ -89,6 +92,9 @@ export const App = () => {
           <Element name={"aboutMe"}>
             <LazyAboutMePage/>
             <Hire/>
+          </Element>
+          <Element name="experience">
+            <LazyExperiencePage/>
           </Element>
           <Element name="projects">
             <LazyProjectsPage/>

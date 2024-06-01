@@ -72,6 +72,22 @@ export const Nav = () => {
           About Me
         </Link>
         <Link activeClass={style.activeLink}
+              to="experience"
+              spy
+              smooth
+              offset={offset}
+              duration={500}
+              onClick={() => {
+                document.body.style.overflow = "auto";
+                setIsMenuOpen(false);
+              }}
+              onSetActive={() => {
+                window.location.hash = "#/experience";
+              }}
+        >
+          Experience
+        </Link>
+        <Link activeClass={style.activeLink}
               to="projects"
               spy
               smooth
