@@ -1,20 +1,26 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {lazy, useContext, useEffect, useState} from "react";
 import "./App.css";
-import {Index} from "../pages/Index/Index";
-import {Projects} from "../pages/Projects/Projects";
-import {Skills} from "../pages/Skills/Skills";
-import {Contacts} from "../pages/Contacts/Contacts";
 import {NotFound} from "../pages/NotFound/NotFound";
 import {animated, useSpring} from "react-spring";
 import {Header} from "../components/Header/Header";
 import {Hire} from "../pages/AboutMe/Hire/Hire";
 import {Footer} from "../components/Footer/Footer";
-import {AboutMe} from "../pages/AboutMe/AboutMe";
 import {Modal} from "../components/Modal/Modal";
 import {Loader} from "../components/Loader/Loader";
 import {Element} from "react-scroll";
 import {LoaderContext} from "../contexts/LoaderContext";
 import {ImageContext} from "../contexts/ImageContext";
+
+const LazyIndexPage = lazy(() => import("../pages/Index/Index")
+  .then((module) => ({default: module.Index})));
+const LazyProjectsPage = lazy(() => import("../pages/Projects/Projects")
+  .then((module) => ({default: module.Projects})));
+const LazySkillsPage = lazy(() => import("../pages/Skills/Skills")
+  .then((module) => ({default: module.Skills})));
+const LazyContactsPage = lazy(() => import("../pages/Contacts/Contacts")
+  .then((module) => ({default: module.Contacts})));
+const LazyAboutMePage = lazy(() => import("../pages/AboutMe/AboutMe")
+  .then((module) => ({default: module.AboutMe})));
 
 export const App = () => {
 
@@ -75,20 +81,20 @@ export const App = () => {
       <div style={{position: "relative", overflow: "hidden", minHeight: "90vh"}}>
         <animated.div className="App" style={animationStylesContent}>
           <Element name="index">
-            <Index/>
+            <LazyIndexPage/>
           </Element>
           <Element name="skills">
-            <Skills/>
+            <LazySkillsPage/>
           </Element>
           <Element name={"aboutMe"}>
-            <AboutMe/>
+            <LazyAboutMePage/>
             <Hire/>
           </Element>
           <Element name="projects">
-            <Projects/>
+            <LazyProjectsPage/>
           </Element>
           <Element name="contacts">
-            <Contacts/>
+            <LazyContactsPage/>
           </Element>
           <Footer/>
         </animated.div>
