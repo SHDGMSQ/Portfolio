@@ -5,6 +5,7 @@ import {Title} from "../../components/Title/Title";
 import {Button} from "../../components/Button/Button";
 import {CgSoftwareDownload} from "react-icons/cg";
 import {Contact} from "./Contact/Contact";
+import {ImageComponent} from "../../components/ImageComponent";
 
 const transformColumns = (photos: Array<any>) => {
   const firstColOrder: Array<any> = [];
@@ -49,7 +50,8 @@ export const AboutMe = () => {
                   {col.map((photo) => {
                     return (
                       <div className={style.photo} key={photo.id} style={{paddingTop: photo.pt}}>
-                        <img src={photo.src}/>
+                        <ImageComponent src={photo.src} />
+                        {/*<img src={photo.src}/>*/}
                       </div>
                     );
                   })}

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import "./App.css";
 import {Index} from "../pages/Index/Index";
 import {Projects} from "../pages/Projects/Projects";
@@ -13,10 +13,13 @@ import {AboutMe} from "../pages/AboutMe/AboutMe";
 import {Modal} from "../components/Modal/Modal";
 import {Loader} from "../components/Loader/Loader";
 import {Element} from "react-scroll";
-import {ModalProvider} from "../contexts/ModalContext";
-import {LoaderProvider} from "../contexts/LoaderContext";
+import {LoaderContext} from "../contexts/LoaderContext";
+import {ImageContext} from "../contexts/ImageContext";
 
 export const App = () => {
+
+  const {showLoader, hideLoader} = useContext(LoaderContext);
+  const {allImagesUpload} = useContext(ImageContext);
 
   const [isVisible, setIsVisible] = useState(false);
   const [isNotFound, setIsNotFound] = useState<boolean>(false);
@@ -51,39 +54,46 @@ export const App = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (!allImagesUpload) {
+      showLoader();
+    } else {
+      hideLoader();
+      document.body.style.overflow = "auto";
+    }
+  }, [allImagesUpload]);
+
   if (isNotFound) {
     return <NotFound/>;
   }
 
   return (
-    <ModalProvider>
-      <LoaderProvider>
-        <Modal/>
-        <Loader/>
-        <Header/>
-        <div style={{position: "relative", overflow: "hidden", minHeight: "90vh"}}>
-          <animated.div className="App" style={animationStylesContent}>
-            <Element name="index">
-              <Index/>
-            </Element>
-            <Element name="skills">
-              <Skills/>
-            </Element>
-            <Element name={"aboutMe"}>
-              <AboutMe/>
-              <Hire/>
-            </Element>
-            <Element name="projects">
-              <Projects/>
-            </Element>
-            <Element name="contacts">
-              <Contacts/>
-            </Element>
-            <Footer/>
-          </animated.div>
-        </div>
-      </LoaderProvider>
-    </ModalProvider>
+    <>
+      <Modal/>
+      <Loader/>;
+      <Header/>;
+      <div style={{position: "relative", overflow: "hidden", minHeight: "90vh"}}>
+        <animated.div className="App" style={animationStylesContent}>
+          <Element name="index">
+            <Index/>
+          </Element>
+          <Element name="skills">
+            <Skills/>
+          </Element>
+          <Element name={"aboutMe"}>
+            <AboutMe/>
+            <Hire/>
+          </Element>
+          <Element name="projects">
+            <Projects/>
+          </Element>
+          <Element name="contacts">
+            <Contacts/>
+          </Element>
+          <Footer/>
+        </animated.div>
+      </div>;
+    </>
   );
 };
 

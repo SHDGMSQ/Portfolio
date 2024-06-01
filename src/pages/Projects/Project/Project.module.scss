@@ -40,40 +40,38 @@
       object-fit: cover;
     }
 
-    &:hover {
-      .linksContainer {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
+    .linksContainer.show {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      opacity: 1;
+      visibility: visible;
+      animation: slideAndDrop 1s ease forwards;
+      z-index: 1;
+
+      a {
         width: 100%;
-        opacity: 1;
-        visibility: visible;
-        animation: slideAndDrop 1s ease forwards;
-        z-index: 1;
 
-        a {
+        button {
           width: 100%;
-          button {
-            width: 100%;
-            opacity: 1;
+          opacity: 1;
 
-            svg {
-              width: 20px;
-              height: 20px;
-              padding-left: 5px;
-              animation: snake 800ms infinite ease-out;
-            }
-          }
-        }
-        .code {
-          button {
-            background-color: black;
+          svg {
+            width: 20px;
+            height: 20px;
+            padding-left: 5px;
+            animation: snake 800ms infinite ease-out;
           }
         }
       }
+
+      .code {
+        button {
+          background-color: black;
+        }
+      }
     }
-
-
   }
 
   .title {
@@ -97,6 +95,7 @@
     &::-webkit-scrollbar {
       display: none;
     }
+
     &.hideGradient {
       mask-image: linear-gradient(to bottom, $bgSecondColor 100%, transparent 100%);
     }

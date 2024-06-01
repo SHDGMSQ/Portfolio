@@ -6,6 +6,7 @@ import {FaInstagram, FaWhatsapp} from "react-icons/fa";
 import {IoLogoLinkedin} from "react-icons/io";
 import {BsGithub} from "react-icons/bs";
 import {IndexIcons} from "../../components/Icons/IndexIcons/IndexIcons";
+import {ImageComponent} from "../../components/ImageComponent";
 
 
 export const Index = () => {
@@ -13,7 +14,7 @@ export const Index = () => {
   return (
     <>
       <div className={style.indexPage} id="index">
-        <img src="/Portfolio/assets/photos/main.jpg" alt=""/>
+        <ImageComponent src="/Portfolio/assets/photos/main.jpg"/>
         <div className={stylesContainer.container}>
           <div className={style.indexContainer}>
             <div className={style.contacts}>

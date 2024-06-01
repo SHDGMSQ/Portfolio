@@ -47,18 +47,6 @@ export const Projects = () => {
                 linkCode={project.linkCode ? project.linkCode: ""}
               />
             ))}
-            {/*<Project*/}
-            {/*  projectName="Photolab"*/}
-            {/*  description="1wrgfwefwerf"*/}
-            {/*  imageSrc={socialIcon}*/}
-            {/*  linkDemo="https://photolab.me"*/}
-            {/*/>*/}
-            {/*<Project*/}
-            {/*  projectName="ToonMe"*/}
-            {/*  description="2wefwefwef"*/}
-            {/*  imageSrc={todoIcon}*/}
-            {/*  linkDemo="https://toonme.com"*/}
-            {/*/>*/}
           </div>
         </div>
       </div>

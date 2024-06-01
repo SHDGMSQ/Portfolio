@@ -6,6 +6,7 @@ import {MdArrowRightAlt} from "react-icons/md";
 import {Links} from "../../../components/Modal/Links/Links";
 import keyboard from "../../../assets/images/keyboard.jpg";
 import {ModalContext} from "../../../contexts/ModalContext";
+import {ImageComponent} from "../../../components/ImageComponent";
 
 const modalContent = <div className={style.inner}>
   <h3>Choose a way to connect!</h3>
@@ -25,7 +26,7 @@ export const Hire = () => {
   return (
     <div className={style.hireBlock}>
       <div className={`${styleContainer.container} ${style.hireContainer}`}>
-        <img src={keyboard}/>
+        <ImageComponent src={keyboard} />
         <h3 className={style.description}>Let's Work Together On Your Next Project!</h3>
         <Button title={"Hire Me"} onClick={clickHireHandler} logo={<MdArrowRightAlt/>}/>
       </div>
