@@ -7,7 +7,7 @@ export const Footer = () => {
         <div className={style.footerBlock}>
             <div className={`${styleContainer.container} ${style.footerContainer}`}>
                 <h2 className={style.title}>Dmitry Shavlukevich</h2>
-                <h6 className={style.copyright}>{`©2022 - ${new Date().getFullYear()} All rights reserved`}</h6>
+                <h6 className={style.copyright}>{`©2021 - ${new Date().getFullYear()} All rights reserved`}</h6>
             </div>
         </div>
     );

@@ -20,6 +20,7 @@ export const Hire = () => {
   const {openModal} = useContext(ModalContext);
 
   const clickHireHandler = () => {
+    console.log(modalContent);
     openModal(modalContent);
   };
 

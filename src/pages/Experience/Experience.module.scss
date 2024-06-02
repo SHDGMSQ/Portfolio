@@ -1,0 +1,210 @@
+@import "../../styles/sass/variables";
+@import "../../styles/sass/mixins";
+
+.experience {
+  position: relative;
+  padding-bottom: 30px;
+
+  .experienceContainer {
+    justify-content: flex-start;
+    flex-direction: column;
+
+    h2 {
+      color: $textTitleColor;
+      margin: 0;
+      padding: 30px 0;
+      width: 100%;
+      @media screen and (max-width: 1363px) {
+        text-align: center;
+      }
+    }
+
+    .inner {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+
+      @media screen and (max-width: 1363px) {
+        justify-content: center;
+      }
+
+      .experienceBlock {
+        background-color: #12141c;
+        padding: 20px;
+        box-sizing: border-box;
+        color: #f26c4f;
+        font-size: 70px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 350px;
+        width: 100%;
+        border-radius: 30px;
+
+        .number {
+          margin: 0;
+          padding: 0;
+          text-shadow: rgba(242, 108, 79, .3) 2px 4px;
+        }
+
+        .subTitle {
+          color: $textTitleColor;
+          font-weight: 500;
+          font-size: 24px;
+          text-align: center;
+        }
+      }
+
+    }
+
+    .jobs {
+      color: $textTitleColor;
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      justify-content: space-between;
+      align-items: self-start;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: 1363px) {
+        justify-content: center;
+        display: grid;
+      }
+
+      .jobBlock {
+        padding: 20px;
+        box-sizing: border-box;
+        max-width: 350px;
+        width: 100%;
+        background-color: #12141c;
+        border-radius: 30px;
+
+        .headerJob {
+          display: flex;
+          gap: 20px;
+
+          img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+
+            @media screen and (max-width: 438px) {
+              width: 35px;
+              height: 35px;
+            }
+          }
+
+          .headerJobName {
+            display: flex;
+            flex-direction: column;
+
+            p {
+              margin: 0;
+              padding: 0;
+            }
+
+            .company {
+              font-weight: 700;
+              font-size: 18px;
+            }
+
+            .sumTime {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .jobPositions {
+
+          .position {
+            padding: 20px 0 0 70px;
+            position: relative;
+            font-size: 14px;
+            @media screen and (max-width: 438px) {
+              padding-left: 55px;
+            }
+
+            &:before {
+              content: "";
+              position: absolute;
+              width: 9px;
+              height: 9px;
+              background-color: rgba(255, 255, 255, 0.6);
+              border-radius: 50%;
+              top: 27px;
+              left: 22px;
+              @media screen and (max-width: 438px) {
+                left: 15px;
+              }
+            }
+
+            span {
+              position: absolute;
+              height: calc(100% - 45px);
+              width: 1px;
+              border-left: 1px solid rgba(255, 255, 255, 0.6);
+              top: 42px;
+              left: 26px;
+              @media screen and (max-width: 438px) {
+                left: 19px;
+              }
+            }
+
+            p {
+              margin: 0;
+              padding: 0;
+            }
+
+            .workingPosition {
+              font-weight: 700;
+              font-size: 16px;
+            }
+
+            .posWorkTimes {
+              display: flex;
+              @media screen and (max-width: 438px) {
+                font-size: 12px;
+              }
+
+              .workPositionTime {
+                color: rgba(255, 255, 255, 0.6);
+                position: relative;
+
+                @media screen and (max-width: 338px){
+                  font-size: 10px;
+                }
+
+                &:after {
+                  content: "";
+                  position: absolute;
+                  width: 6px;
+                  height: 6px;
+                  background-color: rgba(255, 255, 255, 0.6);
+                  border-radius: 50%;
+                  margin: 0 6px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+              }
+
+              .workTime {
+                color: rgba(255, 255, 255, 0.6);
+                padding-left: 18px;
+              }
+            }
+
+            .tasks {
+              margin-top: 10px;
+              color: rgba(255, 255, 255, 0.8);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -22,7 +22,7 @@ const LazyContactsPage = lazy(() => import("../pages/Contacts/Contacts")
 const LazyAboutMePage = lazy(() => import("../pages/AboutMe/AboutMe")
   .then((module) => ({default: module.AboutMe})));
 
-const LazyExperiencePage = lazy(() => import("../feautures/Experience/Experience")
+const LazyExperiencePage = lazy(() => import("../pages/Experience/Experience")
   .then((module) => ({default: module.Experience})));
 
 export const App = () => {
